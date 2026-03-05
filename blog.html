@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Blog & Reflections | Wali Medugu</title>
+    <meta name="description"
+        content="A quiet space for ideas, lessons, and reflections on code, art, and the world by Wali Medugu." />
+    <meta name="keywords"
+        content="Wali Medugu, Blog, Reflections, Software Development, Artificial Intelligence, Activism, Art" />
+    <meta name="author" content="Wali Medugu" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="blog" />
+    <meta property="og:title" content="Blog & Reflections | Wali Medugu" />
+    <meta property="og:description"
+        content="A quiet space for ideas, lessons, and reflections on code, art, and the world." />
+    <meta property="og:url" content="https://walimedugu.com/blog.html" />
+    <meta name="twitter:card" content="summary" />
+    <meta name="twitter:title" content="Blog & Reflections | Wali Medugu" />
+    <meta name="twitter:description"
+        content="A quiet space for ideas, lessons, and reflections on code, art, and the world." />
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Blog",
+      "name": "Wali Medugu's Blog",
+      "url": "https://walimedugu.com/blog.html",
+      "description": "Thoughts and reflections on software, art, and the world.",
+      "author": {
+        "@type": "Person",
+        "name": "Wali Medugu"
+      }
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="auth.css">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --cream: #faf6f0;
+            --warm-white: #fdf9f4;
+            --sand: #e8ddd0;
+            --tan: #c9b99e;
+            --terracotta: #c4724a;
+            --rust: #a85535;
+            --brown: #5c3d2e;
+            --dark: #2a1f17;
+            --text: #3d2b1f;
+            --text-light: #7a5c4a;
+            --ink: #1a110a;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--cream);
+            color: var(--text);
+            font-family: 'Lora', serif;
+            font-size: 17px;
+            line-height: 1.7;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* Grain texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.6;
+        }
+
+        /* NAVBAR */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1.5rem;
+            background: rgba(250, 246, 240, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(201, 185, 158, 0.3);
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--terracotta);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--terracotta);
+        }
+
+        /* HEADER */
+        header {
+            padding: 10rem 3rem 6rem;
+            max-width: 900px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .label {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--terracotta);
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2.5rem, 5vw, 4rem);
+            color: var(--ink);
+            line-height: 1.1;
+            margin-bottom: 1.5rem;
+        }
+
+        p.desc {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            max-width: 600px;
+            margin: 0 auto;
+        }
+
+        /* BLOG LIST */
+        .blog-container {
+            max-width: 900px;
+            margin: 0 auto 10rem;
+            padding: 0 3rem;
+        }
+
+        .post-card {
+            background: var(--warm-white);
+            border: 1px solid var(--sand);
+            padding: 3rem;
+            margin-bottom: 2rem;
+            border-radius: 4px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            display: block;
+        }
+
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(92, 61, 46, 0.08);
+            border-color: var(--tan);
+        }
+
+        .post-meta {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.7rem;
+            color: var(--tan);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            margin-bottom: 1rem;
+        }
+
+        .post-card h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.8rem;
+            color: var(--ink);
+            margin-bottom: 1rem;
+            line-height: 1.3;
+        }
+
+        .post-card p {
+            color: var(--text-light);
+            font-size: 1rem;
+            line-height: 1.7;
+        }
+
+        .read-more {
+            margin-top: 1.5rem;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem;
+            color: var(--terracotta);
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            display: inline-block;
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--ink);
+            color: rgba(250, 246, 240, 0.35);
+            text-align: center;
+            padding: 4rem 2rem;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        footer em {
+            color: var(--terracotta);
+            font-style: normal;
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            header {
+                padding-top: 8rem;
+                padding-left: 1.5rem;
+                padding-right: 1.5rem;
+                width: 100%;
+                box-sizing: border-box;
+            }
+
+            .post-card {
+                padding: 2rem;
+                margin-left: 0;
+                margin-right: 0;
+                width: 100%;
+            }
+
+            .blog-container {
+                padding: 0 1.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <a href="index.html" class="nav-logo" aria-label="Wali Medugu Home">
+            <img src="assets/sign_transparent.png" alt="Wali Medugu Logo"
+                style="height: 56px; width: auto; object-fit: contain;">
+        </a>
+        <ul class="nav-links">
+            <li style="--i:1"><a href="index.html">Home</a></li>
+            <li style="--i:2"><a href="blog.html">Blog</a></li>
+            <li style="--i:3"><a href="index.html#projects">Projects</a></li>
+            <li style="--i:4"><a href="index.html#contact">Contact</a></li>
+        </ul>
+
+        <!-- Authentication UI -->
+        <div class="auth-container">
+            <button id="auth-trigger" class="auth-trigger">Sign In</button>
+            <div id="user-profile-nav" class="user-profile-nav hidden">
+                <div id="avatar-initial" class="user-avatar">?</div>
+                <div id="user-dropdown" class="user-dropdown">
+                    <button id="open-settings" class="dropdown-item">Settings</button>
+                    <button id="logout" class="dropdown-item">Sign Out</button>
+                </div>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header>
+        <span class="label">Thoughts & Reflections</span>
+        <h1>The <em>Blog</em></h1>
+        <p class="desc">A quiet space for ideas, lessons, and reflections on code, art, and the world.</p>
+    </header>
+
+    <main class="blog-container">
+        <!-- Placeholder for posts -->
+        <div class="post-card">
+            <div class="post-meta">March 2025 · 5 min read</div>
+            <h2>Quiet Intensity: Moving Through the World</h2>
+            <p>An essay on the philosophy of deep observation and the need to understand the spaces between people. How
+                quiet focus can be more powerful than loud action.</p>
+            <span class="read-more">Read Entry →</span>
+        </div>
+
+        <div class="post-card">
+            <div class="post-meta">Feb 2025 · 8 min read</div>
+            <h2>The Empathy of Code</h2>
+            <p>Exploring the intersection of software development and activism. Why building tools is fundamentally an
+                act of understanding a stranger's struggles.</p>
+            <span class="read-more">Read Entry →</span>
+        </div>
+
+        <div class="post-card">
+            <div class="post-meta">Jan 2025 · 4 min read</div>
+            <h2>Painting as Thinking</h2>
+            <p>How the act of visual art complements the logic of programming. Finding the balance between the
+                strictness of syntax and the freedom of color.</p>
+            <span class="read-more">Read Entry →</span>
+        </div>
+    </main>
+
+    <footer>
+        <p>© 2025 <em>Wali Medugu</em> — Made with care</p>
+    </footer>
+
+    <!-- Auth Modals -->
+    <div id="auth-modal-overlay" class="auth-modal-overlay">
+        <div class="auth-modal">
+            <button class="close-modal" aria-label="Close">&times;</button>
+            <div id="auth-message" class="auth-message hidden"></div>
+
+            <!-- Sign In View -->
+            <div id="signin-view" class="">
+                <div class="auth-header">
+                    <h2>Welcome Back</h2>
+                    <p>Enter your details to sign in</p>
+                </div>
+                <form id="signin-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="signin-email">Email</label>
+                        <input type="email" id="signin-email" name="email" required placeholder="wali@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="signin-password">Password</label>
+                        <input type="password" id="signin-password" name="password" required>
+                    </div>
+                    <button type="submit" class="auth-submit">Sign In</button>
+                </form>
+                <div class="auth-switch">
+                    Don't have an account? <button id="switch-to-signup">Sign Up</button>
+                </div>
+            </div>
+
+            <!-- Sign Up View -->
+            <div id="signup-view" class="hidden">
+                <div class="auth-header">
+                    <h2>Create Account</h2>
+                    <p>Join the community</p>
+                </div>
+                <form id="signup-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="signup-username">Username</label>
+                        <input type="text" id="signup-username" name="username" required placeholder="walimedugu"
+                            minlength="6" pattern="^[a-zA-Z0-9_]+$">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" name="email" required placeholder="wali@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="password" required minlength="7">
+                    </div>
+                    <button type="submit" class="auth-submit">Sign Up</button>
+                </form>
+                <div class="auth-switch">
+                    Already have an account? <button id="switch-to-signin">Sign In</button>
+                </div>
+            </div>
+
+            <!-- Profile/Settings View -->
+            <div id="profile-view" class="hidden">
+                <div class="auth-header">
+                    <h2>Account Settings</h2>
+                    <p>Manage your presence</p>
+                </div>
+                <form id="profile-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="profile-username">Username</label>
+                        <input type="text" id="profile-username" name="username" required minlength="6"
+                            pattern="^[a-zA-Z0-9_]+$">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-email">Email</label>
+                        <input type="email" id="profile-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-password">New Password (leave blank to keep current)</label>
+                        <input type="password" id="profile-password" name="password" placeholder="••••••••"
+                            minlength="7">
+                    </div>
+                    <button type="submit" class="auth-submit">Save Changes</button>
+                    <button type="button" id="delete-account" class="dropdown-item danger"
+                        style="padding: 1rem; margin-top: 1rem; border: 1px solid #ffccba; border-radius: 2px; text-align: center; width: 100%;">Delete
+                        Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabaseClient.js"></script>
+    <script src="auth.js"></script>
+</body>
+
+</html>

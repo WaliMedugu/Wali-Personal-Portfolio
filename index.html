@@ -1,0 +1,1414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wali Medugu | Developer, Writer & Activist</title>
+    <meta name="description"
+        content="Portfolio of Wali Medugu, a developer, writer, and activist based in Abuja, Nigeria. Specializing in Flutter, Python, and web technologies." />
+    <meta name="keywords"
+        content="Wali Medugu, Developer, Writer, Activist, Flutter Developer, Python, Data Analysis, Abuja Nigeria, Software Engineer" />
+    <meta name="author" content="Wali Medugu" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph / Social -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="Wali Medugu | Developer, Writer & Activist" />
+    <meta property="og:description"
+        content="Portfolio of Wali Medugu, a developer, writer, and activist based in Abuja, Nigeria." />
+    <meta property="og:image" content="https://walimedugu.com/assets/me.jpg" />
+    <meta property="og:url" content="https://walimedugu.com/" />
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Wali Medugu | Developer, Writer & Activist" />
+    <meta name="twitter:description"
+        content="Portfolio of Wali Medugu, a developer, writer, and activist based in Abuja, Nigeria." />
+    <meta name="twitter:image" content="https://walimedugu.com/assets/me.jpg" />
+
+    <!-- Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Person",
+      "name": "Wali Medugu",
+      "url": "https://walimedugu.com/",
+      "image": "https://walimedugu.com/assets/me.jpg",
+      "jobTitle": "Developer & Writer",
+      "description": "Developer, writer, and activist based in Abuja, Nigeria.",
+      "sameAs": [
+        "https://github.com/WaliMedugu/",
+        "https://linkedin.com/in/medugu-wali-0a2770282"
+      ]
+    }
+    </script>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="auth.css">
+    <style>
+        *,
+        *::before,
+        *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        :root {
+            --cream: #faf6f0;
+            --warm-white: #fdf9f4;
+            --sand: #e8ddd0;
+            --tan: #c9b99e;
+            --terracotta: #c4724a;
+            --rust: #a85535;
+            --brown: #5c3d2e;
+            --dark: #2a1f17;
+            --text: #3d2b1f;
+            --text-light: #7a5c4a;
+            --ink: #1a110a;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            background: var(--cream);
+            color: var(--text);
+            font-family: 'Lora', serif;
+            font-size: 17px;
+            line-height: 1.7;
+            overflow-x: hidden;
+            width: 100%;
+        }
+
+        /* Grain texture overlay */
+        body::before {
+            content: '';
+            position: fixed;
+            inset: 0;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.6;
+        }
+
+        /* NAV */
+        nav {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 100;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 0.5rem 1.5rem;
+            background: rgba(250, 246, 240, 0.85);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid rgba(201, 185, 158, 0.3);
+        }
+
+        .nav-logo {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.3rem;
+            color: var(--terracotta);
+            text-decoration: none;
+            letter-spacing: 0.02em;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+            list-style: none;
+        }
+
+        .nav-links a {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.12em;
+            color: var(--text-light);
+            text-decoration: none;
+            transition: color 0.2s;
+        }
+
+        .nav-links a:hover {
+            color: var(--terracotta);
+        }
+
+        /* HERO */
+        .hero {
+            min-height: 100vh;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            align-items: center;
+            padding: 8rem 4rem 4rem;
+            /* Increased side padding */
+            max-width: 1400px;
+            /* Increased max width */
+            margin: 0 auto;
+            gap: 6rem;
+            /* Increased gap */
+        }
+
+        .hero-text {
+            animation: fadeUp 0.9s ease both;
+        }
+
+        .hero-eyebrow {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.72rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--terracotta);
+            margin-bottom: 1.2rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .hero-eyebrow::before {
+            content: '';
+            display: inline-block;
+            width: 2.5rem;
+            height: 1px;
+            background: var(--terracotta);
+        }
+
+        h1 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(3rem, 6vw, 5.5rem);
+            font-weight: 700;
+            line-height: 1.05;
+            color: var(--ink);
+            margin-bottom: 1.5rem;
+        }
+
+        h1 em {
+            font-style: italic;
+            color: var(--terracotta);
+        }
+
+        .hero-bio {
+            font-size: 1.05rem;
+            color: var(--text-light);
+            max-width: 480px;
+            margin-bottom: 2.5rem;
+            line-height: 1.8;
+        }
+
+        .hero-cta {
+            display: flex;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .btn-primary {
+            background: var(--terracotta);
+            color: white;
+            padding: 0.85rem 2rem;
+            text-decoration: none;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border-radius: 2px;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .btn-primary:hover {
+            background: var(--rust);
+            transform: translateY(-1px);
+        }
+
+        .btn-secondary {
+            color: var(--brown);
+            padding: 0.85rem 2rem;
+            text-decoration: none;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            border: 1px solid var(--tan);
+            border-radius: 2px;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .btn-secondary:hover {
+            border-color: var(--terracotta);
+            color: var(--terracotta);
+        }
+
+        /* Metaball Button */
+        .metaball-btn-wrapper {
+            position: relative;
+            display: inline-block;
+            cursor: pointer;
+            padding: 0;
+            background: transparent;
+            border: none;
+            outline: none;
+            text-decoration: none;
+            margin: 20px;
+        }
+
+        .metaball-btn-text {
+            position: relative;
+            display: inline-flex;
+            padding: 0.85rem 2rem;
+            color: white;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            text-decoration: none;
+            z-index: 2;
+            transition: transform 0.15s;
+        }
+
+        .metaball-btn-wrapper:hover .metaball-btn-text {
+            transform: translateY(-1px);
+        }
+
+        .metaball-btn-visuals {
+            position: absolute;
+            top: -20px;
+            left: -20px;
+            right: -20px;
+            bottom: -20px;
+            filter: url('#metaball-sm');
+            z-index: 1;
+            pointer-events: none;
+        }
+
+        .metaball-btn-bg {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            right: 20px;
+            bottom: 20px;
+            background: var(--terracotta);
+            border-radius: 2px;
+            transition: background 0.2s;
+        }
+
+        .btn-blob {
+            position: absolute;
+            background: var(--terracotta);
+            border-radius: 50%;
+            width: 30px;
+            height: 30px;
+            transition: background 0.2s;
+        }
+
+        .metaball-btn-wrapper:hover .metaball-btn-bg,
+        .metaball-btn-wrapper:hover .btn-blob {
+            background: var(--rust);
+        }
+
+        .btn-blob-1 {
+            top: 50%;
+            left: 30px;
+            animation: btn-blob-move-1 3s infinite alternate ease-in-out;
+        }
+
+        .btn-blob-2 {
+            top: 25px;
+            left: 50%;
+            animation: btn-blob-move-2 4s infinite alternate ease-in-out;
+        }
+
+        .btn-blob-3 {
+            top: 50%;
+            right: 30px;
+            animation: btn-blob-move-3 3.5s infinite alternate ease-in-out;
+        }
+
+        .btn-blob-4 {
+            bottom: 25px;
+            left: 30%;
+            animation: btn-blob-move-4 4.5s infinite alternate ease-in-out;
+        }
+
+        .btn-blob-5 {
+            bottom: 25px;
+            right: 30%;
+            animation: btn-blob-move-5 3.8s infinite alternate ease-in-out;
+        }
+
+        @keyframes btn-blob-move-1 {
+            0% {
+                transform: translate(0, -50%) scale(1);
+            }
+
+            100% {
+                transform: translate(-15px, -50%) scale(1.3);
+            }
+        }
+
+        @keyframes btn-blob-move-2 {
+            0% {
+                transform: translate(-50%, 0) scale(1);
+            }
+
+            100% {
+                transform: translate(-40%, -15px) scale(1.6);
+            }
+        }
+
+        @keyframes btn-blob-move-3 {
+            0% {
+                transform: translate(0, -50%) scale(1);
+            }
+
+            100% {
+                transform: translate(15px, -40%) scale(1.4);
+            }
+        }
+
+        @keyframes btn-blob-move-4 {
+            0% {
+                transform: translate(-50%, 0) scale(1);
+            }
+
+            100% {
+                transform: translate(-60%, 15px) scale(1.2);
+            }
+        }
+
+        @keyframes btn-blob-move-5 {
+            0% {
+                transform: translate(50%, 0) scale(1);
+            }
+
+            100% {
+                transform: translate(40%, 15px) scale(1.4);
+            }
+        }
+
+        /* Hero photo */
+        .hero-image-wrap {
+            animation: fadeUp 0.9s 0.2s ease both;
+            position: relative;
+        }
+
+        .hero-photo-frame {
+            position: relative;
+            width: 100%;
+            max-width: 420px;
+            margin: 0 auto;
+        }
+
+        .hero-photo-frame::before {
+            content: '';
+            position: absolute;
+            inset: -12px;
+            border: 2px solid var(--tan);
+            border-radius: 2px;
+            z-index: 0;
+            transform: rotate(2deg);
+        }
+
+        .hero-photo {
+            position: relative;
+            z-index: 1;
+            width: 100%;
+            aspect-ratio: 4/5;
+            background: var(--sand);
+            border-radius: 2px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            /* Changed to visible to show metaballs outside the frame */
+            overflow: visible;
+        }
+
+        /* Metaballs */
+        .metaballs {
+            position: absolute;
+            inset: -40%;
+            filter: url('#metaball');
+            z-index: 0;
+            pointer-events: none;
+            /* Debug/Fallback background */
+            background: radial-gradient(circle, rgba(232, 221, 208, 0.4) 0%, transparent 70%);
+        }
+
+        .blob {
+            position: absolute;
+            background: var(--terracotta);
+            border-radius: 50%;
+            width: 180px;
+            height: 180px;
+            opacity: 0.7;
+            animation: move 20s infinite alternate ease-in-out;
+            left: 20%;
+            top: 20%;
+        }
+
+        .blob:nth-child(2) {
+            background: var(--tan);
+            width: 240px;
+            height: 240px;
+            animation-duration: 35s;
+            animation-delay: -7s;
+            left: 30%;
+            top: 10%;
+        }
+
+        .blob:nth-child(3) {
+            background: var(--rust);
+            width: 160px;
+            height: 160px;
+            animation-duration: 25s;
+            animation-delay: -12s;
+            left: 10%;
+            top: 30%;
+        }
+
+        .blob:nth-child(4) {
+            background: var(--brown);
+            width: 200px;
+            height: 200px;
+            animation-duration: 40s;
+            animation-delay: -18s;
+            opacity: 0.4;
+            left: 40%;
+            top: 40%;
+        }
+
+        .blob:nth-child(5) {
+            background: var(--terracotta);
+            width: 120px;
+            height: 120px;
+            animation-duration: 15s;
+            animation-delay: -3s;
+            left: 20%;
+            top: 60%;
+        }
+
+        @keyframes move {
+            0% {
+                transform: translate(0, 0) scale(1) rotate(0deg);
+            }
+
+            33% {
+                transform: translate(60px, 40px) scale(1.2) rotate(120deg);
+            }
+
+            66% {
+                transform: translate(-40px, 80px) scale(0.9) rotate(240deg);
+            }
+
+            100% {
+                transform: translate(30px, -20px) scale(1.1) rotate(360deg);
+            }
+        }
+
+
+
+
+        .photo-placeholder {
+            text-align: center;
+            color: var(--text-light);
+        }
+
+        .photo-placeholder svg {
+            width: 64px;
+            height: 64px;
+            opacity: 0.4;
+            margin-bottom: 0.75rem;
+        }
+
+        .photo-placeholder p {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.12em;
+            text-transform: uppercase;
+            opacity: 0.6;
+        }
+
+        .hero-photo-badge {
+            position: absolute;
+            bottom: -1.5rem;
+            right: -1.5rem;
+            background: var(--terracotta);
+            color: white;
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 0.75rem;
+            line-height: 1.4;
+            z-index: 2;
+            animation: spin 20s linear infinite;
+        }
+
+        @keyframes spin {
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        /* SECTION STYLES */
+        section {
+            padding: 7rem 3rem;
+        }
+
+        .section-inner {
+            max-width: 1100px;
+            margin: 0 auto;
+        }
+
+        .section-label {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.2em;
+            text-transform: uppercase;
+            color: var(--terracotta);
+            margin-bottom: 0.75rem;
+            display: flex;
+            align-items: center;
+            gap: 0.8rem;
+        }
+
+        .section-label::before {
+            content: '';
+            display: inline-block;
+            width: 2rem;
+            height: 1px;
+            background: var(--terracotta);
+        }
+
+        h2 {
+            font-family: 'Playfair Display', serif;
+            font-size: clamp(2rem, 4vw, 3rem);
+            font-weight: 700;
+            color: var(--ink);
+            line-height: 1.15;
+            margin-bottom: 1rem;
+        }
+
+        h2 em {
+            font-style: italic;
+            color: var(--terracotta);
+        }
+
+        .section-desc {
+            color: var(--text-light);
+            max-width: 540px;
+            margin-bottom: 3.5rem;
+            font-size: 1rem;
+        }
+
+        /* DIVIDER */
+        .divider {
+            width: 100%;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--tan), transparent);
+            margin: 0;
+        }
+
+        /* WORK / PROJECTS */
+        #work {
+            background: var(--warm-white);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+            gap: 2rem;
+        }
+
+        .project-card {
+            background: var(--cream);
+            border: 1px solid var(--sand);
+            border-radius: 4px;
+            overflow: hidden;
+            transition: transform 0.25s, box-shadow 0.25s;
+            cursor: pointer;
+        }
+
+        .project-card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 16px 40px rgba(92, 61, 46, 0.12);
+        }
+
+        .project-thumb {
+            height: 200px;
+            background: linear-gradient(135deg, var(--sand), var(--tan));
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .project-card:nth-child(2) .project-thumb {
+            background: linear-gradient(135deg, #ddd0c0, #c4a88a);
+        }
+
+        .project-card:nth-child(3) .project-thumb {
+            background: linear-gradient(135deg, #c9bfb0, #b5a090);
+        }
+
+        .project-tag {
+            position: absolute;
+            top: 1rem;
+            left: 1rem;
+            background: var(--cream);
+            color: var(--terracotta);
+            font-family: 'DM Mono', monospace;
+            font-size: 0.62rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            padding: 0.3rem 0.6rem;
+            border-radius: 2px;
+        }
+
+        .project-body {
+            padding: 1.5rem;
+        }
+
+        .project-body h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.25rem;
+            color: var(--ink);
+            margin-bottom: 0.5rem;
+        }
+
+        .project-body p {
+            color: var(--text-light);
+            font-size: 0.9rem;
+            line-height: 1.6;
+            margin-bottom: 1rem;
+        }
+
+        .project-link {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.7rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--terracotta);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 0.4rem;
+            transition: gap 0.2s;
+        }
+
+        .project-link:hover {
+            gap: 0.7rem;
+        }
+
+        /* SKILLS */
+        #skills {
+            background: var(--cream);
+        }
+
+        .skills-layout {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            align-items: start;
+        }
+
+        .skill-group {
+            margin-bottom: 2.5rem;
+        }
+
+        .skill-group-title {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.1rem;
+            color: var(--brown);
+            margin-bottom: 1rem;
+            padding-bottom: 0.5rem;
+            border-bottom: 1px solid var(--sand);
+        }
+
+        .skill-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+        }
+
+        .skill-tag {
+            background: var(--sand);
+            color: var(--brown);
+            padding: 0.35rem 0.85rem;
+            border-radius: 100px;
+            font-size: 0.82rem;
+            font-family: 'Lora', serif;
+            transition: background 0.2s;
+        }
+
+        .skill-tag:hover {
+            background: var(--tan);
+        }
+
+        .skills-quote {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.4rem;
+            line-height: 1.6;
+            color: var(--text-light);
+            border-left: 3px solid var(--terracotta);
+            padding-left: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        /* BLOG */
+        #blog {
+            background: var(--warm-white);
+        }
+
+        .posts-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .post-featured {
+            background: var(--cream);
+            border: 1px solid var(--sand);
+            border-radius: 4px;
+            padding: 2.5rem;
+            transition: box-shadow 0.25s;
+        }
+
+        .post-featured:hover {
+            box-shadow: 0 12px 32px rgba(92, 61, 46, 0.1);
+        }
+
+        .post-meta {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            color: var(--tan);
+            margin-bottom: 0.75rem;
+        }
+
+        .post-featured h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--ink);
+            margin-bottom: 0.75rem;
+            line-height: 1.25;
+        }
+
+        .post-featured p {
+            color: var(--text-light);
+            font-size: 0.95rem;
+            line-height: 1.7;
+        }
+
+        .posts-list {
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+
+        .post-item {
+            background: var(--cream);
+            border: 1px solid var(--sand);
+            border-radius: 4px;
+            padding: 1.5rem;
+            transition: box-shadow 0.25s;
+            cursor: pointer;
+        }
+
+        .post-item:hover {
+            box-shadow: 0 8px 20px rgba(92, 61, 46, 0.08);
+        }
+
+        .post-item h4 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1rem;
+            color: var(--ink);
+            margin-bottom: 0.3rem;
+            line-height: 1.4;
+        }
+
+        .post-item p {
+            color: var(--text-light);
+            font-size: 0.82rem;
+        }
+
+        /* CONTACT */
+        #contact {
+            background: var(--dark);
+        }
+
+        #contact .section-label {
+            color: var(--tan);
+        }
+
+        #contact .section-label::before {
+            background: var(--tan);
+        }
+
+        #contact h2 {
+            color: var(--cream);
+        }
+
+        #contact .section-desc {
+            color: rgba(250, 246, 240, 0.55);
+        }
+
+        .contact-layout {
+            display: grid;
+            grid-template-columns: 1fr 1.2fr;
+            gap: 5rem;
+            align-items: center;
+        }
+
+        .contact-info {}
+
+        .contact-note {
+            font-family: 'Playfair Display', serif;
+            font-style: italic;
+            font-size: 1.2rem;
+            color: rgba(250, 246, 240, 0.7);
+            line-height: 1.7;
+            margin-bottom: 2.5rem;
+        }
+
+        .contact-links {
+            display: flex;
+            flex-direction: column;
+            gap: 0.75rem;
+        }
+
+        .contact-link {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            color: var(--tan);
+            text-decoration: none;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.82rem;
+            letter-spacing: 0.05em;
+            transition: color 0.2s;
+        }
+
+        .contact-link:hover {
+            color: var(--terracotta);
+        }
+
+        .contact-link span {
+            width: 1.5rem;
+            height: 1px;
+            background: currentColor;
+            display: inline-block;
+        }
+
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 1.2rem;
+        }
+
+        #contact .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 0.4rem;
+        }
+
+        #contact .form-group label {
+            font-family: 'DM Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.15em;
+            text-transform: uppercase;
+            color: var(--tan);
+        }
+
+        #contact .form-group input,
+        #contact .form-group textarea {
+            background: rgba(255, 255, 255, 0.05);
+            border: 1px solid rgba(201, 185, 158, 0.2);
+            border-radius: 2px;
+            padding: 0.85rem 1rem;
+            color: var(--cream);
+            font-family: 'Lora', serif;
+            font-size: 0.9rem;
+            outline: none;
+            transition: border-color 0.2s;
+            resize: none;
+        }
+
+        #contact .form-group input::placeholder,
+        #contact .form-group textarea::placeholder {
+            color: rgba(250, 246, 240, 0.25);
+        }
+
+        #contact .form-group input:focus,
+        #contact .form-group textarea:focus {
+            border-color: var(--terracotta);
+        }
+
+        #contact .form-group textarea {
+            height: 120px;
+        }
+
+        .btn-send {
+            background: var(--terracotta);
+            color: white;
+            border: none;
+            padding: 0.9rem 2rem;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            cursor: pointer;
+            border-radius: 2px;
+            align-self: flex-start;
+            transition: background 0.2s, transform 0.15s;
+        }
+
+        .btn-send:hover {
+            background: var(--rust);
+            transform: translateY(-1px);
+        }
+
+        /* FOOTER */
+        footer {
+            background: var(--ink);
+            color: rgba(250, 246, 240, 0.35);
+            text-align: center;
+            padding: 2rem;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.65rem;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+        }
+
+        footer em {
+            color: var(--terracotta);
+            font-style: normal;
+        }
+
+        /* ANIMATIONS */
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(24px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: opacity 0.7s ease, transform 0.7s ease;
+        }
+
+        .reveal.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* RESPONSIVE */
+        @media (max-width: 768px) {
+            nav {
+                padding: 1rem 1.5rem;
+            }
+
+            .nav-links {
+                gap: 1.5rem;
+            }
+
+            .hero {
+                grid-template-columns: 1fr;
+                padding: 7rem 1.5rem 4rem;
+                gap: 3rem;
+            }
+
+            .hero-image-wrap {
+                order: -1;
+            }
+
+            section {
+                padding: 5rem 1.5rem;
+            }
+
+            .skills-layout,
+            .posts-grid,
+            .contact-layout {
+                grid-template-columns: 1fr;
+                gap: 2.5rem;
+                width: 100%;
+                overflow-x: hidden;
+            }
+
+            .hero-photo-frame {
+                max-width: 100%;
+                overflow: visible;
+                /* Changed from hidden to reveal metaballs */
+            }
+
+            .metaballs {
+                display: block;
+                inset: -20%;
+                /* Reduced for mobile */
+                width: 140%;
+                height: 140%;
+                left: -20%;
+                top: -20%;
+                overflow: hidden;
+            }
+
+            .blob {
+                width: 100px !important;
+                height: 100px !important;
+            }
+
+            .blob:nth-child(2) {
+                width: 140px !important;
+                height: 140px !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- NAV -->
+    <nav>
+        <a href="#" class="nav-logo" aria-label="Wali Medugu Home">
+            <img src="assets/sign_transparent.png" alt="Wali Medugu Logo"
+                style="height: 56px; width: auto; object-fit: contain;">
+        </a>
+        <ul class="nav-links">
+            <li style="--i:1"><a href="index.html">Home</a></li>
+            <li style="--i:2"><a href="blog.html">Blog</a></li>
+            <li style="--i:3"><a href="#projects">Projects</a></li>
+            <li style="--i:4"><a href="#contact">Contact</a></li>
+        </ul>
+
+        <!-- Authentication UI -->
+        <div class="auth-container">
+            <button id="auth-trigger" class="auth-trigger">Sign In</button>
+            <div id="user-profile-nav" class="user-profile-nav hidden">
+                <div id="avatar-initial" class="user-avatar">?</div>
+                <div id="user-dropdown" class="user-dropdown">
+                    <button id="open-settings" class="dropdown-item">Settings</button>
+                    <button id="logout" class="dropdown-item">Sign Out</button>
+                </div>
+            </div>
+            <!-- Mobile Menu Toggle -->
+            <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section style="padding-top: 0; padding-bottom: 0;">
+        <div class="hero">
+            <div class="hero-text">
+                <div class="hero-eyebrow">Hello, I'm Wali</div>
+                <h1>Wali <em>Medugu</em></h1>
+                <p class="hero-bio">I'm a developer, writer, and activist based in Abuja, Nigeria — someone who moves
+                    through the world with quiet intensity and a deep need to understand it. I build things with code,
+                    challenge things with words, and find meaning in the spaces between people.</p>
+                <div class="hero-cta">
+                    <a href="blog.html" class="btn-primary">See My Work</a>
+                    <a href="#contact" class="btn-secondary">Get In Touch</a>
+                </div>
+            </div>
+            <div class="hero-image-wrap">
+                <div class="hero-photo-frame">
+                    <div class="hero-photo">
+                        <div class="metaballs">
+                            <div class="blob"></div>
+                            <div class="blob"></div>
+                            <div class="blob"></div>
+                            <div class="blob"></div>
+                            <div class="blob"></div>
+                        </div>
+                        <img src="assets/me.jpg" alt="Portrait of Wali Medugu"
+                            style="width: 100%; height: 100%; object-fit: cover; position: relative; z-index: 2;">
+                    </div>
+                    <div class="hero-photo-badge">Nice to<br>meet you</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- WORK -->
+    <section id="thoughts">
+        <div class="section-inner">
+            <div class="section-label">Thoughts & Writing</div>
+            <h2>Things I've <em>thought about</em></h2>
+            <p class="section-desc">Ideas, lessons, and reflections — shared in the hope that they're useful to someone
+                else too.</p>
+            <div class="reveal" style="margin-top: 2.5rem;">
+                <a href="blog.html" class="metaball-btn-wrapper">
+                    <div class="metaball-btn-visuals">
+                        <div class="metaball-btn-bg"></div>
+                        <div class="btn-blob btn-blob-1"></div>
+                        <div class="btn-blob btn-blob-2"></div>
+                        <div class="btn-blob btn-blob-3"></div>
+                        <div class="btn-blob btn-blob-4"></div>
+                        <div class="btn-blob btn-blob-5"></div>
+                    </div>
+                    <span class="metaball-btn-text">Explore My Thoughts & Blog →</span>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- BLOG -->
+    <section id="projects">
+        <div class="section-inner">
+            <div class="section-label">Selected Work</div>
+            <h2>Things I've <em>made</em></h2>
+            <p class="section-desc">A collection of projects I'm proud of — each one a small piece of what I've learned
+                and who I've become.</p>
+            <div class="posts-grid reveal">
+                <div class="post-featured">
+                    <div class="post-meta">March 2025 · 5 min read</div>
+                    <h3>Your Most Interesting Post Title Goes Here</h3>
+                    <p>A short preview of your longest, most thoughtful piece. Something you've been wanting to say for
+                        a while. Give people a reason to click and read the whole thing.</p>
+                </div>
+                <div class="posts-list">
+                    <div class="post-item">
+                        <div class="post-meta">Feb 2025</div>
+                        <h4>A Shorter Post Title</h4>
+                        <p>One line summary of what it's about.</p>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-meta">Jan 2025</div>
+                        <h4>Another Post Worth Reading</h4>
+                        <p>One line summary of what it's about.</p>
+                    </div>
+                    <div class="post-item">
+                        <div class="post-meta">Dec 2024</div>
+                        <h4>A Third Post or Reflection</h4>
+                        <p>One line summary of what it's about.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div class="divider"></div>
+
+    <!-- SKILLS -->
+    <section id="skills">
+        <div class="section-inner">
+            <div class="section-label">Capabilities</div>
+            <h2>What I <em>bring</em></h2>
+            <div class="skills-layout reveal">
+                <div>
+                    <div class="skill-group">
+                        <div class="skill-group-title">Craft & Discipline</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Software Development</span>
+                            <span class="skill-tag">Data Analysis</span>
+                            <span class="skill-tag">Creative Writing</span>
+                            <span class="skill-tag">Activism</span>
+                            <span class="skill-tag">Visual Art</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-title">Tools & Techniques</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Flutter</span>
+                            <span class="skill-tag">Python</span>
+                            <span class="skill-tag">Web Technologies</span>
+                            <span class="skill-tag">Data Analysis Tools</span>
+                        </div>
+                    </div>
+                    <div class="skill-group">
+                        <div class="skill-group-title">Soft Skills</div>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Collaboration</span>
+                            <span class="skill-tag">Communication</span>
+                            <span class="skill-tag">Problem Solving</span>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <blockquote class="skills-quote">
+                        "I write to think, build to solve, and paint to feel."
+                    </blockquote>
+                    <p style="color: var(--text-light); margin-top: 2rem; font-size: 0.95rem; line-height: 1.8;">
+                        I'm a self-driven developer and writer with a broad toolkit — from Flutter mobile apps and
+                        full-stack web development to Python scripting and data analysis. Beyond the screen, I'm an
+                        activist and painter who believes that technology and storytelling are both, at their core, acts
+                        of empathy.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section id="contact">
+        <div class="section-inner" style="text-align: center;">
+            <div class="contact-info reveal" style="max-width: 600px; margin: 0 auto;">
+                <div class="section-label" style="justify-content: center;">Connect</div>
+                <h2 style="color: var(--cream);">Let's <em style="color: var(--tan);">talk</em></h2>
+                <p class="contact-note">"I'm always open to a good conversation — about code, ideas, or the world."</p>
+                <div class="contact-links"
+                    style="align-items: center; justify-content: center; margin-top: 2rem; gap: 1.5rem;">
+                    <a href="mailto:blueparticlestudios@gmail.com" class="contact-link" style="font-size: 1.1rem;"
+                        aria-label="Email Wali Medugu"><span></span>Email</a>
+                    <a href="https://linkedin.com/in/medugu-wali-0a2770282" class="contact-link"
+                        style="font-size: 1.1rem;" target="_blank" rel="noopener noreferrer"
+                        aria-label="Wali Medugu LinkedIn Profile"><span></span>LinkedIn</a>
+                    <a href="https://github.com/WaliMedugu/" class="contact-link" style="font-size: 1.1rem;"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Wali Medugu GitHub Profile"><span></span>GitHub</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer>
+        <p>© 2025 <em>Wali Medugu</em> — Made with care</p>
+    </footer>
+
+    <script>
+        // Scroll reveal
+        const reveals = document.querySelectorAll('.reveal');
+        const observer = new IntersectionObserver(entries => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+        reveals.forEach(el => observer.observe(el));
+    </script>
+
+    <!-- Metaballs Filter -->
+    <svg style="display: none;">
+        <defs>
+            <filter id="metaball">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="20" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 40 -12" />
+            </filter>
+            <filter id="metaball-sm">
+                <feGaussianBlur in="SourceGraphic" stdDeviation="8" result="blur" />
+                <feColorMatrix in="blur" mode="matrix" values="1 0 0 0 0  0 1 0 0 0  0 0 1 0 0  0 0 0 20 -8" />
+            </filter>
+        </defs>
+    </svg>
+
+    <!-- Auth Modals -->
+    <div id="auth-modal-overlay" class="auth-modal-overlay">
+        <div class="auth-modal">
+            <button class="close-modal" aria-label="Close">&times;</button>
+            <div id="auth-message" class="auth-message hidden"></div>
+
+            <!-- Sign In View -->
+            <div id="signin-view" class="">
+                <div class="auth-header">
+                    <h2>Welcome Back</h2>
+                    <p>Enter your details to sign in</p>
+                </div>
+                <form id="signin-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="signin-email">Email</label>
+                        <input type="email" id="signin-email" name="email" required placeholder="wali@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="signin-password">Password</label>
+                        <input type="password" id="signin-password" name="password" required>
+                    </div>
+                    <button type="submit" class="auth-submit">Sign In</button>
+                </form>
+                <div class="auth-switch">
+                    Don't have an account? <button id="switch-to-signup">Sign Up</button>
+                </div>
+            </div>
+
+            <!-- Sign Up View -->
+            <div id="signup-view" class="hidden">
+                <div class="auth-header">
+                    <h2>Create Account</h2>
+                    <p>Join the community</p>
+                </div>
+                <form id="signup-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="signup-username">Username</label>
+                        <input type="text" id="signup-username" name="username" required placeholder="walimedugu"
+                            minlength="6" pattern="^[a-zA-Z0-9_]+$">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-email">Email</label>
+                        <input type="email" id="signup-email" name="email" required placeholder="wali@example.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="signup-password">Password</label>
+                        <input type="password" id="signup-password" name="password" required minlength="7">
+                    </div>
+                    <button type="submit" class="auth-submit">Sign Up</button>
+                </form>
+                <div class="auth-switch">
+                    Already have an account? <button id="switch-to-signin">Sign In</button>
+                </div>
+            </div>
+
+            <!-- Profile/Settings View -->
+            <div id="profile-view" class="hidden">
+                <div class="auth-header">
+                    <h2>Account Settings</h2>
+                    <p>Manage your presence</p>
+                </div>
+                <form id="profile-form" class="auth-form">
+                    <div class="form-group">
+                        <label for="profile-username">Username</label>
+                        <input type="text" id="profile-username" name="username" required minlength="6"
+                            pattern="^[a-zA-Z0-9_]+$">
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-email">Email</label>
+                        <input type="email" id="profile-email" name="email" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="profile-password">New Password (leave blank to keep current)</label>
+                        <input type="password" id="profile-password" name="password" placeholder="••••••••"
+                            minlength="7">
+                    </div>
+                    <button type="submit" class="auth-submit">Save Changes</button>
+                    <button type="button" id="delete-account" class="dropdown-item danger"
+                        style="padding: 1rem; margin-top: 1rem; border: 1px solid #ffccba; border-radius: 2px; text-align: center; width: 100%;">Delete
+                        Account</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Supabase Clients -->
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+    <script src="supabaseClient.js"></script>
+    <script src="auth.js"></script>
+</body>
+
+</html>
