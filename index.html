@@ -46,7 +46,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="auth.css">
+
     <style>
         *,
         *::before,
@@ -101,7 +101,7 @@
             top: 0;
             left: 0;
             right: 0;
-            z-index: 100;
+            z-index: 10003;
             display: flex;
             justify-content: space-between;
             align-items: center;
@@ -121,9 +121,15 @@
         }
 
         .nav-links {
+            position: fixed;
+            top: 0;
+            right: 1.5rem;
+            height: 56px;
             display: flex;
+            align-items: center;
             gap: 2.5rem;
             list-style: none;
+            z-index: 10004;
         }
 
         .nav-links a {
@@ -636,6 +642,8 @@
             overflow: hidden;
             transition: transform 0.25s, box-shadow 0.25s;
             cursor: pointer;
+            text-decoration: none;
+            display: block;
         }
 
         .project-card:hover {
@@ -873,7 +881,7 @@
             align-items: center;
         }
 
-        .contact-info {}
+
 
         .contact-note {
             font-family: 'Playfair Display', serif;
@@ -1022,49 +1030,278 @@
             transform: translateY(0);
         }
 
-        /* RESPONSIVE */
+        /* HAMBURGER MENU */
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            justify-content: center;
+            gap: 5px;
+            width: 28px;
+            height: 28px;
+            cursor: pointer;
+            z-index: 10002;
+            background: none;
+            border: none;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        .hamburger span {
+            display: block;
+            width: 100%;
+            height: 2px;
+            background: var(--brown);
+            border-radius: 2px;
+            transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1),
+                        opacity 0.25s ease;
+            transform-origin: center;
+        }
+
+        .hamburger.active span:nth-child(1) {
+            transform: translateY(7px) rotate(45deg);
+        }
+
+        .hamburger.active span:nth-child(2) {
+            opacity: 0;
+        }
+
+        .hamburger.active span:nth-child(3) {
+            transform: translateY(-7px) rotate(-45deg);
+        }
+
+        /* MOBILE NAV OVERLAY */
+        .nav-overlay {
+            display: none;
+        }
+
+        /* RESPONSIVE — Tablet & below */
+        @media (max-width: 1024px) {
+            .hero {
+                padding: 7rem 3rem 4rem;
+                gap: 4rem;
+            }
+
+            section {
+                padding: 5rem 2rem;
+            }
+
+            .skills-layout {
+                gap: 3rem;
+            }
+
+            .contact-layout {
+                gap: 3rem;
+            }
+        }
+
         @media (max-width: 768px) {
-            nav {
-                padding: 1rem 1.5rem;
+            /* HAMBURGER VISIBLE */
+            .hamburger {
+                display: flex;
             }
 
+            /* NAV OVERLAY */
+            .nav-overlay {
+                display: block;
+                position: fixed;
+                inset: 0;
+                background: rgba(250, 246, 240, 0.97);
+                backdrop-filter: blur(20px);
+                z-index: 10000;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.35s ease, visibility 0.35s ease;
+            }
+
+            .nav-overlay.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            /* MOBILE NAV LINKS */
             .nav-links {
-                gap: 1.5rem;
+                position: fixed;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 100vh;
+                z-index: 10004;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                justify-content: center;
+                gap: 2.5rem;
+                opacity: 0;
+                visibility: hidden;
+                transition: opacity 0.35s ease, visibility 0.35s ease;
+                pointer-events: none;
             }
 
+            .nav-links.active {
+                opacity: 1;
+                visibility: visible;
+                pointer-events: auto;
+            }
+
+            .nav-links a {
+                font-size: 1rem;
+                letter-spacing: 0.15em;
+                padding: 0.75rem 1.5rem;
+            }
+
+            .nav-links li {
+                opacity: 0;
+                transform: translateY(20px);
+                transition: opacity 0.3s ease, transform 0.3s ease;
+            }
+
+            .nav-links.active li {
+                opacity: 1;
+                transform: translateY(0);
+            }
+
+            .nav-links.active li:nth-child(1) { transition-delay: 0.1s; }
+            .nav-links.active li:nth-child(2) { transition-delay: 0.18s; }
+            .nav-links.active li:nth-child(3) { transition-delay: 0.26s; }
+            .nav-links.active li:nth-child(4) { transition-delay: 0.34s; }
+
+            nav {
+                padding: 0.75rem 1.25rem;
+            }
+
+            /* HERO */
             .hero {
                 grid-template-columns: 1fr;
-                padding: 7rem 1.5rem 4rem;
-                gap: 3rem;
+                padding: 6rem 1.5rem 3rem;
+                gap: 2.5rem;
+                min-height: auto;
             }
 
             .hero-image-wrap {
                 order: -1;
             }
 
-            section {
-                padding: 5rem 1.5rem;
+            .hero-photo-frame {
+                max-width: 280px;
+                overflow: visible;
             }
 
+            .hero-photo-badge {
+                width: 70px;
+                height: 70px;
+                font-size: 0.65rem;
+                bottom: -1rem;
+                right: -1rem;
+            }
+
+            h1 {
+                font-size: clamp(2.2rem, 8vw, 3.5rem);
+            }
+
+            .hero-bio {
+                font-size: 0.95rem;
+                max-width: 100%;
+            }
+
+            .hero-cta {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                text-align: center;
+                padding: 1rem 2rem;
+            }
+
+            /* SECTIONS */
+            section {
+                padding: 4rem 1.25rem;
+            }
+
+            h2 {
+                font-size: clamp(1.6rem, 5vw, 2.4rem);
+            }
+
+            .section-desc {
+                font-size: 0.92rem;
+                margin-bottom: 2.5rem;
+            }
+
+            /* PROJECTS GRID */
+            .projects-grid {
+                grid-template-columns: 1fr;
+                gap: 1.5rem;
+            }
+
+            .project-thumb {
+                height: 180px;
+            }
+
+            .project-body {
+                padding: 1.25rem;
+            }
+
+            .project-body h3 {
+                font-size: 1.1rem;
+            }
+
+            .project-body p {
+                font-size: 0.85rem;
+            }
+
+            /* SKILLS */
             .skills-layout,
             .posts-grid,
             .contact-layout {
                 grid-template-columns: 1fr;
-                gap: 2.5rem;
+                gap: 2rem;
                 width: 100%;
                 overflow-x: hidden;
             }
 
-            .hero-photo-frame {
-                max-width: 100%;
-                overflow: visible;
-                /* Changed from hidden to reveal metaballs */
+            .skills-quote {
+                font-size: 1.15rem;
+                padding-left: 1.25rem;
             }
 
+            .skill-tags {
+                gap: 0.4rem;
+            }
+
+            .skill-tag {
+                font-size: 0.78rem;
+                padding: 0.3rem 0.7rem;
+            }
+
+            /* BLOG POSTS */
+            .post-featured {
+                padding: 1.5rem;
+            }
+
+            .post-featured h3 {
+                font-size: 1.25rem;
+            }
+
+            .post-item {
+                padding: 1.25rem;
+            }
+
+            /* CONTACT */
+            .contact-note {
+                font-size: 1rem;
+            }
+
+            .contact-link {
+                font-size: 0.9rem;
+                padding: 0.5rem 0;
+            }
+
+            /* METABALLS */
             .metaballs {
                 display: block;
                 inset: -20%;
-                /* Reduced for mobile */
                 width: 140%;
                 height: 140%;
                 left: -20%;
@@ -1073,14 +1310,169 @@
             }
 
             .blob {
-                width: 100px !important;
-                height: 100px !important;
+                width: 90px !important;
+                height: 90px !important;
             }
 
             .blob:nth-child(2) {
-                width: 140px !important;
-                height: 140px !important;
+                width: 120px !important;
+                height: 120px !important;
             }
+
+            .blob:nth-child(4) {
+                display: none;
+            }
+
+            /* METABALL BUTTONS */
+            .metaball-btn-wrapper {
+                margin: 12px 0;
+                display: inline-flex;
+            }
+
+            .metaball-btn-text {
+                font-size: 0.68rem;
+                padding: 0.75rem 1.5rem;
+            }
+
+            /* FOOTER */
+            footer {
+                padding: 1.5rem 1rem;
+                font-size: 0.6rem;
+            }
+        }
+
+        /* Small phones */
+        @media (max-width: 480px) {
+            nav {
+                padding: 0.6rem 1rem;
+            }
+
+            .nav-logo img {
+                height: 42px !important;
+            }
+
+            .hero {
+                padding: 5.5rem 1rem 2.5rem;
+                gap: 2rem;
+            }
+
+            .hero-photo-frame {
+                max-width: 220px;
+            }
+
+            .hero-photo-frame::before {
+                inset: -8px;
+            }
+
+            .hero-photo-badge {
+                width: 58px;
+                height: 58px;
+                font-size: 0.55rem;
+                bottom: -0.8rem;
+                right: -0.8rem;
+            }
+
+            h1 {
+                font-size: clamp(1.8rem, 9vw, 2.6rem);
+                margin-bottom: 1rem;
+            }
+
+            .hero-eyebrow {
+                font-size: 0.65rem;
+                margin-bottom: 0.8rem;
+            }
+
+            .hero-bio {
+                font-size: 0.88rem;
+                line-height: 1.7;
+                margin-bottom: 1.8rem;
+            }
+
+            .btn-primary,
+            .btn-secondary {
+                font-size: 0.7rem;
+                padding: 0.9rem 1.5rem;
+            }
+
+            section {
+                padding: 3rem 1rem;
+            }
+
+            h2 {
+                font-size: clamp(1.4rem, 6vw, 1.8rem);
+            }
+
+            .section-label {
+                font-size: 0.62rem;
+            }
+
+            .section-desc {
+                font-size: 0.85rem;
+                margin-bottom: 2rem;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .project-thumb {
+                height: 160px;
+            }
+
+            .skill-group-title {
+                font-size: 0.95rem;
+            }
+
+            .skills-quote {
+                font-size: 1rem;
+            }
+
+            .contact-note {
+                font-size: 0.92rem;
+            }
+
+            .metaball-btn-text {
+                font-size: 0.62rem;
+                padding: 0.7rem 1.2rem;
+            }
+
+            .btn-blob {
+                width: 20px;
+                height: 20px;
+            }
+        }
+
+        /* Extra-small devices (very narrow phones) */
+        @media (max-width: 360px) {
+            .hero {
+                padding: 5rem 0.75rem 2rem;
+            }
+
+            .hero-photo-frame {
+                max-width: 180px;
+            }
+
+            h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero-bio {
+                font-size: 0.82rem;
+            }
+
+            section {
+                padding: 2.5rem 0.75rem;
+            }
+
+            .skill-tag {
+                font-size: 0.72rem;
+                padding: 0.25rem 0.6rem;
+            }
+        }
+
+        /* Prevent body scroll when menu is open */
+        body.menu-open {
+            overflow: hidden;
         }
     </style>
 </head>
@@ -1093,31 +1485,19 @@
             <img src="assets/sign_transparent.png" alt="Wali Medugu Logo"
                 style="height: 56px; width: auto; object-fit: contain;">
         </a>
-        <ul class="nav-links">
-            <li style="--i:1"><a href="index.html">Home</a></li>
-            <li style="--i:2"><a href="blog.html">Blog</a></li>
-            <li style="--i:3"><a href="#projects">Projects</a></li>
-            <li style="--i:4"><a href="#contact">Contact</a></li>
-        </ul>
-
-        <!-- Authentication UI -->
-        <div class="auth-container">
-            <button id="auth-trigger" class="auth-trigger">Sign In</button>
-            <div id="user-profile-nav" class="user-profile-nav hidden">
-                <div id="avatar-initial" class="user-avatar">?</div>
-                <div id="user-dropdown" class="user-dropdown">
-                    <button id="open-settings" class="dropdown-item">Settings</button>
-                    <button id="logout" class="dropdown-item">Sign Out</button>
-                </div>
-            </div>
-            <!-- Mobile Menu Toggle -->
-            <button id="mobile-nav-toggle" class="mobile-nav-toggle" aria-label="Menu">
-                <span></span>
-                <span></span>
-                <span></span>
-            </button>
-        </div>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
     </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+        <li style="--i:1"><a href="index.html">Home</a></li>
+        <li style="--i:2"><a href="projects.html">Projects</a></li>
+        <li style="--i:3"><a href="blog.html">Blog</a></li>
+        <li style="--i:4"><a href="#contact">Contact</a></li>
+    </ul>
 
     <!-- HERO -->
     <section style="padding-top: 0; padding-bottom: 0;">
@@ -1179,37 +1559,31 @@
 
     <div class="divider"></div>
 
-    <!-- BLOG -->
+    <!-- PROJECTS PREVIEW -->
     <section id="projects">
         <div class="section-inner">
             <div class="section-label">Selected Work</div>
             <h2>Things I've <em>made</em></h2>
             <p class="section-desc">A collection of projects I'm proud of — each one a small piece of what I've learned
                 and who I've become.</p>
-            <div class="posts-grid reveal">
-                <div class="post-featured">
-                    <div class="post-meta">March 2025 · 5 min read</div>
-                    <h3>Your Most Interesting Post Title Goes Here</h3>
-                    <p>A short preview of your longest, most thoughtful piece. Something you've been wanting to say for
-                        a while. Give people a reason to click and read the whole thing.</p>
+            <div class="projects-grid reveal" id="projects-preview-container" style="margin-bottom: 3.5rem;">
+                <!-- Featured projects will be loaded here -->
+                <div style="color: var(--tan); text-align: center; grid-column: 1 / -1; padding: 2rem;">
+                    Fetching projects...
                 </div>
-                <div class="posts-list">
-                    <div class="post-item">
-                        <div class="post-meta">Feb 2025</div>
-                        <h4>A Shorter Post Title</h4>
-                        <p>One line summary of what it's about.</p>
+            </div>
+            <div class="reveal" style="text-align: center;">
+                <a href="projects.html" class="metaball-btn-wrapper">
+                    <div class="metaball-btn-visuals">
+                        <div class="metaball-btn-bg"></div>
+                        <div class="btn-blob btn-blob-1"></div>
+                        <div class="btn-blob btn-blob-2"></div>
+                        <div class="btn-blob btn-blob-3"></div>
+                        <div class="btn-blob btn-blob-4"></div>
+                        <div class="btn-blob btn-blob-5"></div>
                     </div>
-                    <div class="post-item">
-                        <div class="post-meta">Jan 2025</div>
-                        <h4>Another Post Worth Reading</h4>
-                        <p>One line summary of what it's about.</p>
-                    </div>
-                    <div class="post-item">
-                        <div class="post-meta">Dec 2024</div>
-                        <h4>A Third Post or Reflection</h4>
-                        <p>One line summary of what it's about.</p>
-                    </div>
-                </div>
+                    <span class="metaball-btn-text">View All Projects →</span>
+                </a>
             </div>
         </div>
     </section>
@@ -1261,6 +1635,9 @@
                         activist and painter who believes that technology and storytelling are both, at their core, acts
                         of empathy.
                     </p>
+                    <div style="margin-top: 2rem;">
+                        <a href="assets/docs/wali_medugu_cv.docx.pdf" class="btn-secondary" download>Download CV →</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -1283,6 +1660,9 @@
                     <a href="https://github.com/WaliMedugu/" class="contact-link" style="font-size: 1.1rem;"
                         target="_blank" rel="noopener noreferrer"
                         aria-label="Wali Medugu GitHub Profile"><span></span>GitHub</a>
+                    <a href="assets/docs/wali_medugu_cv.docx.pdf" class="contact-link" style="font-size: 1.1rem;"
+                        target="_blank" rel="noopener noreferrer"
+                        aria-label="Wali Medugu CV"><span></span>CV</a>
                 </div>
             </div>
         </div>
@@ -1293,7 +1673,49 @@
         <p>© 2025 <em>Wali Medugu</em> — Made with care</p>
     </footer>
 
+    <script src="assets/projects.js"></script>
     <script>
+        // Hamburger menu toggle
+        (function() {
+            const hamburger = document.getElementById('hamburger-toggle');
+            const navLinks = document.getElementById('nav-links');
+            const navOverlay = document.getElementById('nav-overlay');
+            
+            function toggleMenu() {
+                const isOpen = hamburger.classList.toggle('active');
+                navLinks.classList.toggle('active');
+                navOverlay.classList.toggle('active');
+                document.body.classList.toggle('menu-open');
+                hamburger.setAttribute('aria-expanded', isOpen);
+            }
+            
+            function closeMenu() {
+                hamburger.classList.remove('active');
+                navLinks.classList.remove('active');
+                navOverlay.classList.remove('active');
+                document.body.classList.remove('menu-open');
+                hamburger.setAttribute('aria-expanded', 'false');
+            }
+            
+            hamburger.addEventListener('click', toggleMenu);
+            navOverlay.addEventListener('click', closeMenu);
+            
+            // Close menu when a link is clicked
+            navLinks.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', closeMenu);
+            });
+            
+            // Close menu on escape key
+            document.addEventListener('keydown', (e) => {
+                if (e.key === 'Escape') closeMenu();
+            });
+            
+            // Close menu on resize to desktop
+            window.addEventListener('resize', () => {
+                if (window.innerWidth > 768) closeMenu();
+            });
+        })();
+
         // Scroll reveal
         const reveals = document.querySelectorAll('.reveal');
         const observer = new IntersectionObserver(entries => {
@@ -1304,6 +1726,32 @@
             });
         }, { threshold: 0.1 });
         reveals.forEach(el => observer.observe(el));
+
+        // Projects Fetch (Preview)
+        function loadProjectsPreview() {
+            const container = document.getElementById('projects-preview-container');
+            if (container && typeof projects !== 'undefined') {
+                const featured = projects.filter(p => p.featured).slice(0, 3);
+                if (featured.length > 0) {
+                    container.innerHTML = featured.map(project => `
+                        <a href="${project.link}" class="project-card">
+                            <div class="project-thumb">
+                                <span class="project-tag">${project.tag}</span>
+                                <img src="${project.image}" alt="${project.title}" style="width: 100%; height: 100%; object-fit: cover;">
+                            </div>
+                            <div class="project-body">
+                                <h3>${project.title}</h3>
+                                <p>${project.description}</p>
+                                <span class="project-link">View Project →</span>
+                            </div>
+                        </a>
+                    `).join('');
+                } else {
+                    container.innerHTML = '<p style="color:var(--tan); font-style:italic; grid-column: 1/-1; text-align:center;">The workshop is quiet for now.</p>';
+                }
+            }
+        }
+        loadProjectsPreview();
     </script>
 
     <!-- Metaballs Filter -->
@@ -1320,95 +1768,9 @@
         </defs>
     </svg>
 
-    <!-- Auth Modals -->
-    <div id="auth-modal-overlay" class="auth-modal-overlay">
-        <div class="auth-modal">
-            <button class="close-modal" aria-label="Close">&times;</button>
-            <div id="auth-message" class="auth-message hidden"></div>
 
-            <!-- Sign In View -->
-            <div id="signin-view" class="">
-                <div class="auth-header">
-                    <h2>Welcome Back</h2>
-                    <p>Enter your details to sign in</p>
-                </div>
-                <form id="signin-form" class="auth-form">
-                    <div class="form-group">
-                        <label for="signin-email">Email</label>
-                        <input type="email" id="signin-email" name="email" required placeholder="wali@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="signin-password">Password</label>
-                        <input type="password" id="signin-password" name="password" required>
-                    </div>
-                    <button type="submit" class="auth-submit">Sign In</button>
-                </form>
-                <div class="auth-switch">
-                    Don't have an account? <button id="switch-to-signup">Sign Up</button>
-                </div>
-            </div>
 
-            <!-- Sign Up View -->
-            <div id="signup-view" class="hidden">
-                <div class="auth-header">
-                    <h2>Create Account</h2>
-                    <p>Join the community</p>
-                </div>
-                <form id="signup-form" class="auth-form">
-                    <div class="form-group">
-                        <label for="signup-username">Username</label>
-                        <input type="text" id="signup-username" name="username" required placeholder="walimedugu"
-                            minlength="6" pattern="^[a-zA-Z0-9_]+$">
-                    </div>
-                    <div class="form-group">
-                        <label for="signup-email">Email</label>
-                        <input type="email" id="signup-email" name="email" required placeholder="wali@example.com">
-                    </div>
-                    <div class="form-group">
-                        <label for="signup-password">Password</label>
-                        <input type="password" id="signup-password" name="password" required minlength="7">
-                    </div>
-                    <button type="submit" class="auth-submit">Sign Up</button>
-                </form>
-                <div class="auth-switch">
-                    Already have an account? <button id="switch-to-signin">Sign In</button>
-                </div>
-            </div>
 
-            <!-- Profile/Settings View -->
-            <div id="profile-view" class="hidden">
-                <div class="auth-header">
-                    <h2>Account Settings</h2>
-                    <p>Manage your presence</p>
-                </div>
-                <form id="profile-form" class="auth-form">
-                    <div class="form-group">
-                        <label for="profile-username">Username</label>
-                        <input type="text" id="profile-username" name="username" required minlength="6"
-                            pattern="^[a-zA-Z0-9_]+$">
-                    </div>
-                    <div class="form-group">
-                        <label for="profile-email">Email</label>
-                        <input type="email" id="profile-email" name="email" required>
-                    </div>
-                    <div class="form-group">
-                        <label for="profile-password">New Password (leave blank to keep current)</label>
-                        <input type="password" id="profile-password" name="password" placeholder="••••••••"
-                            minlength="7">
-                    </div>
-                    <button type="submit" class="auth-submit">Save Changes</button>
-                    <button type="button" id="delete-account" class="dropdown-item danger"
-                        style="padding: 1rem; margin-top: 1rem; border: 1px solid #ffccba; border-radius: 2px; text-align: center; width: 100%;">Delete
-                        Account</button>
-                </form>
-            </div>
-        </div>
-    </div>
-
-    <!-- Supabase Clients -->
-    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
-    <script src="supabaseClient.js"></script>
-    <script src="auth.js"></script>
 </body>
 
 </html>

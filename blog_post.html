@@ -4,39 +4,14 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Blog & Reflections | Wali Medugu</title>
-    <meta name="description"
-        content="A quiet space for ideas, lessons, and reflections on code, art, and the world by Wali Medugu." />
-    <meta name="keywords"
-        content="Wali Medugu, Blog, Reflections, Software Development, Artificial Intelligence, Activism, Art" />
-    <meta name="author" content="Wali Medugu" />
-    <meta name="robots" content="index, follow" />
+    <title id="page-title">Blog Post | Wali Medugu</title>
+    <meta name="description" id="meta-desc" content="Wali Medugu's reflections and thoughts." />
 
-    <!-- Open Graph / Social -->
-    <meta property="og:type" content="blog" />
-    <meta property="og:title" content="Blog & Reflections | Wali Medugu" />
-    <meta property="og:description"
-        content="A quiet space for ideas, lessons, and reflections on code, art, and the world." />
-    <meta property="og:url" content="https://walimedugu.com/blog.html" />
-    <meta name="twitter:card" content="summary" />
-    <meta name="twitter:title" content="Blog & Reflections | Wali Medugu" />
-    <meta name="twitter:description"
-        content="A quiet space for ideas, lessons, and reflections on code, art, and the world." />
-
-    <!-- Schema Markup -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Blog",
-      "name": "Wali Medugu's Blog",
-      "url": "https://walimedugu.com/blog.html",
-      "description": "Thoughts and reflections on software, art, and the world.",
-      "author": {
-        "@type": "Person",
-        "name": "Wali Medugu"
-      }
-    }
-    </script>
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" id="og-title" content="Blog Post | Wali Medugu" />
+    <meta property="og:description" id="og-desc" content="Wali Medugu's reflections and thoughts." />
+    <meta property="og:image" id="og-image" content="" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
@@ -66,29 +41,12 @@
             --ink: #1a110a;
         }
 
-        html {
-            scroll-behavior: smooth;
-        }
-
         body {
             background: var(--cream);
             color: var(--text);
             font-family: 'Lora', serif;
-            font-size: 17px;
-            line-height: 1.7;
-            overflow-x: hidden;
-            width: 100%;
-        }
-
-        /* Grain texture overlay */
-        body::before {
-            content: '';
-            position: fixed;
-            inset: 0;
-            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E");
-            pointer-events: none;
-            z-index: 9999;
-            opacity: 0.6;
+            line-height: 1.8;
+            font-size: 18px;
         }
 
         /* NAVBAR */
@@ -113,7 +71,6 @@
             font-size: 1.3rem;
             color: var(--terracotta);
             text-decoration: none;
-            letter-spacing: 0.02em;
         }
 
         .nav-links {
@@ -135,68 +92,32 @@
             letter-spacing: 0.12em;
             color: var(--text-light);
             text-decoration: none;
-            transition: color 0.2s;
         }
 
-        .nav-links a:hover {
-            color: var(--terracotta);
-        }
-
-        /* HEADER */
-        header {
-            padding: 10rem 3rem 6rem;
+        /* POST HEADER */
+        header.post-header {
+            padding: 12rem 2rem 6rem;
             max-width: 900px;
             margin: 0 auto;
             text-align: center;
         }
 
-        .label {
+        .post-label {
             font-family: 'DM Mono', monospace;
             font-size: 0.75rem;
             color: var(--terracotta);
-            letter-spacing: 0.2em;
             text-transform: uppercase;
+            letter-spacing: 0.2em;
             margin-bottom: 1rem;
             display: block;
         }
 
-        h1 {
+        h1.post-title {
             font-family: 'Playfair Display', serif;
-            font-size: clamp(2.5rem, 5vw, 4rem);
+            font-size: clamp(2.5rem, 5vw, 4.5rem);
             color: var(--ink);
             line-height: 1.1;
-            margin-bottom: 1.5rem;
-        }
-
-        p.desc {
-            font-size: 1.1rem;
-            color: var(--text-light);
-            max-width: 600px;
-            margin: 0 auto;
-        }
-
-        /* BLOG LIST */
-        .blog-container {
-            max-width: 900px;
-            margin: 0 auto 10rem;
-            padding: 0 3rem;
-        }
-
-        .post-card {
-            background: var(--warm-white);
-            border: 1px solid var(--sand);
-            padding: 3rem;
             margin-bottom: 2rem;
-            border-radius: 4px;
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            text-decoration: none;
-            display: block;
-        }
-
-        .post-card:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 15px 40px rgba(92, 61, 46, 0.08);
-            border-color: var(--tan);
         }
 
         .post-meta {
@@ -205,31 +126,86 @@
             color: var(--tan);
             text-transform: uppercase;
             letter-spacing: 0.1em;
-            margin-bottom: 1rem;
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
         }
 
-        .post-card h2 {
+        /* FEATURED IMAGE */
+        .featured-image-container {
+            max-width: 1000px;
+            margin: 0 auto 6rem;
+            padding: 0 2rem;
+        }
+
+        .featured-image-container img {
+            width: 100%;
+            height: auto;
+            border-radius: 4px;
+            box-shadow: 0 30px 60px rgba(92, 61, 46, 0.1);
+        }
+
+        /* CONTENT */
+        .post-content {
+            max-width: 800px;
+            margin: 0 auto 10rem;
+            padding: 0 2rem;
+        }
+
+        .post-content h2 {
             font-family: 'Playfair Display', serif;
-            font-size: 1.8rem;
+            font-size: 2.2rem;
             color: var(--ink);
-            margin-bottom: 1rem;
-            line-height: 1.3;
+            margin: 3rem 0 1.5rem;
+            line-height: 1.2;
         }
 
-        .post-card p {
+        .post-content h3 {
+            font-family: 'Playfair Display', serif;
+            font-size: 1.6rem;
+            color: var(--ink);
+            margin: 2rem 0 1.25rem;
+        }
+
+        .post-content p {
+            margin-bottom: 1.8rem;
+        }
+
+        .post-content blockquote {
+            border-left: 3px solid var(--terracotta);
+            padding: 0.5rem 0 0.5rem 2rem;
+            font-style: italic;
             color: var(--text-light);
-            font-size: 1rem;
-            line-height: 1.7;
+            font-size: 1.2rem;
+            margin: 3rem 0;
         }
 
-        .read-more {
-            margin-top: 1.5rem;
+        .post-content pre {
             font-family: 'DM Mono', monospace;
-            font-size: 0.75rem;
-            color: var(--terracotta);
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            display: inline-block;
+            background: var(--warm-white);
+            border: 1px solid var(--sand);
+            padding: 2rem;
+            overflow-x: auto;
+            margin: 2rem 0;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .post-content img {
+            width: 100%;
+            border-radius: 4px;
+            margin: 3rem 0;
+        }
+
+        /* ACCESS RESTRICTED */
+        #password-protected {
+            text-align: center;
+            padding: 5rem 2rem;
+            background: var(--warm-white);
+            border: 1px solid var(--sand);
+            border-radius: 4px;
+            max-width: 500px;
+            margin: 0 auto 12rem;
         }
 
         /* FOOTER */
@@ -244,9 +220,8 @@
             text-transform: uppercase;
         }
 
-        footer em {
-            color: var(--terracotta);
-            font-style: normal;
+        .hidden {
+            display: none !important;
         }
 
         /* HAMBURGER MENU */
@@ -324,7 +299,6 @@
                 left: 0;
                 right: 0;
                 bottom: 0;
-                height: 100vh;
                 z-index: 10004;
                 display: flex;
                 flex-direction: column;
@@ -363,44 +337,45 @@
             .nav-links.active li:nth-child(1) { transition-delay: 0.1s; }
             .nav-links.active li:nth-child(2) { transition-delay: 0.18s; }
             .nav-links.active li:nth-child(3) { transition-delay: 0.26s; }
-            .nav-links.active li:nth-child(4) { transition-delay: 0.34s; }
 
             nav {
                 padding: 0.75rem 1.25rem;
             }
 
-            header {
+            header.post-header {
                 padding: 7rem 1.5rem 4rem;
-                width: 100%;
-                box-sizing: border-box;
             }
 
-            h1 {
-                font-size: clamp(2rem, 7vw, 3rem);
+            h1.post-title {
+                font-size: clamp(1.8rem, 7vw, 2.5rem);
             }
 
-            p.desc {
-                font-size: 0.95rem;
+            .post-meta {
+                flex-direction: column;
+                gap: 0.5rem;
             }
 
-            .post-card {
-                padding: 1.75rem;
-                margin-left: 0;
-                margin-right: 0;
-                width: 100%;
-            }
-
-            .post-card h2 {
-                font-size: 1.4rem;
-            }
-
-            .post-card p {
-                font-size: 0.9rem;
-            }
-
-            .blog-container {
+            .post-content {
                 padding: 0 1.25rem;
                 margin-bottom: 6rem;
+            }
+
+            .post-content h2 {
+                font-size: 1.6rem;
+            }
+
+            .post-content h3 {
+                font-size: 1.3rem;
+            }
+
+            .featured-image-container {
+                padding: 0 1.25rem;
+                margin-bottom: 4rem;
+            }
+
+            #password-protected {
+                margin: 0 1.25rem 8rem;
+                padding: 3rem 1.5rem;
             }
 
             footer {
@@ -414,44 +389,37 @@
                 padding: 0.6rem 1rem;
             }
 
-            .nav-logo img {
-                height: 42px !important;
-            }
-
-            header {
+            header.post-header {
                 padding: 6rem 1rem 3rem;
             }
 
-            h1 {
-                font-size: clamp(1.6rem, 8vw, 2.2rem);
+            h1.post-title {
+                font-size: clamp(1.5rem, 8vw, 2rem);
             }
 
-            p.desc {
-                font-size: 0.88rem;
-            }
-
-            .post-card {
-                padding: 1.25rem;
-            }
-
-            .post-card h2 {
-                font-size: 1.2rem;
-            }
-
-            .blog-container {
+            .post-content {
                 padding: 0 1rem;
+            }
+
+            .post-content h2 {
+                font-size: 1.4rem;
+            }
+
+            .featured-image-container {
+                padding: 0 1rem;
+            }
+
+            #password-protected {
+                margin: 0 1rem 6rem;
+                padding: 2rem 1rem;
             }
         }
     </style>
 </head>
 
 <body>
-
     <nav>
-        <a href="index.html" class="nav-logo" aria-label="Wali Medugu Home">
-            <img src="assets/sign_transparent.png" alt="Wali Medugu Logo"
-                style="height: 56px; width: auto; object-fit: contain;">
-        </a>
+        <a href="index.html" class="nav-logo">Wali <em>Medugu</em></a>
         <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
             <span></span>
             <span></span>
@@ -460,28 +428,48 @@
     </nav>
     <div class="nav-overlay" id="nav-overlay"></div>
     <ul class="nav-links" id="nav-links">
-        <li style="--i:1"><a href="index.html">Home</a></li>
-        <li style="--i:2"><a href="projects.html">Projects</a></li>
-        <li style="--i:3"><a href="blog.html">Blog</a></li>
-        <li style="--i:4"><a href="index.html#contact">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="blog.html">Blog</a></li>
     </ul>
 
-    <header>
-        <span class="label">Thoughts & Reflections</span>
-        <h1>The <em>Blog</em></h1>
-        <p class="desc">A quiet space for ideas, lessons, and reflections on code, art, and the world.</p>
-    </header>
+    <article id="post-view">
+        <header class="post-header">
+            <span class="post-label" id="post-category">Reflections</span>
+            <h1 class="post-title" id="post-title">Loading...</h1>
+            <div class="post-meta">
+                <span id="post-date">March 2025</span>
+                <span id="post-read-time">5 min read</span>
+                <a href="#" id="edit-link" class="hidden" style="color: var(--terracotta); text-decoration: none;">(Edit
+                    Post)</a>
+            </div>
+        </header>
 
-    <main class="blog-container" id="posts-container">
-        <!-- Posts will be injected here -->
-    </main>
+        <div class="featured-image-container hidden" id="featured-image">
+            <img src="" alt="" id="post-image">
+        </div>
+
+        <div id="password-protected" class="hidden">
+            <h2 style="font-family: 'Playfair Display', serif; margin-bottom: 1rem;">This entry is private</h2>
+            <p style="margin-bottom: 2rem;">Please enter the password to read this reflection.</p>
+            <form id="password-form" style="display: flex; gap: 0.5rem; justify-content: center; flex-wrap: wrap;">
+                <input type="password" id="entry-password" placeholder="Password"
+                    style="padding: 0.75rem; border: 1px solid var(--sand); border-radius: 2px; min-width: 0; flex: 1; max-width: 200px;">
+                <button type="submit" class="auth-submit" style="padding: 0.75rem 1.5rem;">Unlock</button>
+            </form>
+            <p id="password-error" class="hidden" style="color: var(--rust); font-size: 0.8rem; margin-top: 1rem;">
+                Incorrect password.</p>
+        </div>
+
+        <div class="post-content" id="post-content">
+            <!-- Blocks injected here -->
+        </div>
+    </article>
 
     <footer>
         <p>© 2025 <em>Wali Medugu</em> — Made with care</p>
     </footer>
 
-    <!-- Scripts -->
-    <script src="assets/posts.js"></script>
     <script>
         // Hamburger menu toggle
         (function() {
@@ -519,22 +507,8 @@
         })();
 
         document.addEventListener('DOMContentLoaded', () => {
-            const container = document.getElementById('posts-container');
-            
-            if (typeof posts !== 'undefined' && posts.length > 0) {
-                container.innerHTML = posts.map(post => `
-                    <a href="${post.link}" class="post-card">
-                        <div class="post-meta">
-                            <span>${post.date}</span>
-                        </div>
-                        <h2>${post.title}</h2>
-                        <p>${post.excerpt}</p>
-                        <span class="read-more">Read Reflection →</span>
-                    </a>
-                `).join('');
-            } else {
-                container.innerHTML = `<p style="text-align: center; color: var(--tan); padding: 4rem;">The ink hasn't dried on any thoughts yet.</p>`;
-            }
+            document.getElementById('post-title').textContent = "Reflection Not Found";
+            document.getElementById('post-content').innerHTML = `<p style="text-align: center; color: var(--tan); padding: 4rem;">This particular thought seems to have vanished into the ether.</p>`;
         });
     </script>
 </body>

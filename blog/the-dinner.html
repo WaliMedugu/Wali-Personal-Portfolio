@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>the dinner | Wali Medugu Blog</title>
+    <meta name="description" content="A reflection on a surprise birthday dinner and the people who plan things for you." />
+    <meta name="keywords" content="Wali Medugu, Blog, the dinner, Palm Ave Abuja, friendships, birthday surprise" />
+    <meta name="author" content="Wali Medugu" />
+    <meta name="robots" content="index, follow" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="the dinner | Wali Medugu Blog" />
+    <meta property="og:description" content="I didn't know it was happening. That's the part i keep going back to." />
+    <meta property="og:url" content="https://walimedugu.com/blog/the-dinner.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root { --cream: #faf6f0; --warm-white: #fdf9f4; --sand: #e8ddd0; --tan: #c9b99e; --terracotta: #c4724a; --rust: #a85535; --brown: #5c3d2e; --dark: #2a1f17; --text: #3d2b1f; --text-light: #7a5c4a; --ink: #1a110a; }
+        body { background: var(--cream); color: var(--text); font-family: 'Lora', serif; line-height: 1.8; font-size: 18px; overflow-x: hidden; width: 100%; }
+        body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9999; opacity: 0.6; }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 10003; display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 1.5rem; background: rgba(250, 246, 240, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(201, 185, 158, 0.3); }
+        .nav-logo { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.3rem; color: var(--terracotta); text-decoration: none; }
+        .nav-links { position: fixed; top: 0; right: 1.5rem; height: 56px; display: flex; align-items: center; gap: 2.5rem; list-style: none; z-index: 10004; }
+        .nav-links a { font-family: 'DM Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-light); text-decoration: none; }
+        header { padding: 12rem 2rem 6rem; max-width: 800px; margin: 0 auto; text-align: center; }
+        .label { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--terracotta); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 1rem; display: block; }
+        h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4.5rem); color: var(--ink); line-height: 1.1; margin-bottom: 2rem; }
+        .meta { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--tan); text-transform: uppercase; letter-spacing: 0.1em; display: flex; justify-content: center; gap: 2rem; }
+        article { max-width: 750px; margin: 0 auto 10rem; padding: 0 2rem; }
+        article p { margin-bottom: 2rem; }
+        .back-link { display: block; font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--terracotta); text-decoration: none; margin-top: 6rem; text-align: center; text-transform: uppercase; letter-spacing: 0.1em; }
+        footer { background: var(--ink); color: rgba(250, 246, 240, 0.35); text-align: center; padding: 4rem 2rem; font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; }
+        footer em { color: var(--terracotta); font-style: normal; }
+        /* HAMBURGER MENU */
+        .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 28px; height: 28px; cursor: pointer; z-index: 10002; background: none; border: none; padding: 0; -webkit-tap-highlight-color: transparent; }
+        .hamburger span { display: block; width: 100%; height: 2px; background: var(--brown); border-radius: 2px; transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease; transform-origin: center; }
+        .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .nav-overlay { display: none; }
+        body.menu-open { overflow: hidden; }
+
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-overlay { display: block; position: fixed; inset: 0; background: rgba(250, 246, 240, 0.97); backdrop-filter: blur(20px); z-index: 10000; opacity: 0; visibility: hidden; transition: opacity 0.35s ease, visibility 0.35s ease; }
+            .nav-overlay.active { opacity: 1; visibility: visible; }
+            .nav-links { position: fixed; top: 0; left: 0; right: 0; bottom: 0; height: 100vh; z-index: 10004; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; opacity: 0; visibility: hidden; transition: opacity 0.35s ease, visibility 0.35s ease; pointer-events: none; }
+            .nav-links.active { opacity: 1; visibility: visible; pointer-events: auto; }
+            .nav-links a { font-size: 1rem; letter-spacing: 0.15em; padding: 0.75rem 1.5rem; }
+            .nav-links li { opacity: 0; transform: translateY(20px); transition: opacity 0.3s ease, transform 0.3s ease; }
+            .nav-links.active li { opacity: 1; transform: translateY(0); }
+            .nav-links.active li:nth-child(1) { transition-delay: 0.1s; }
+            .nav-links.active li:nth-child(2) { transition-delay: 0.18s; }
+            .nav-links.active li:nth-child(3) { transition-delay: 0.26s; }
+            nav { padding: 0.75rem 1.25rem; }
+            header { padding: 7rem 1.5rem 4rem; }
+            h1 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+            .meta { flex-direction: column; gap: 0.5rem; }
+            article { padding: 0 1.25rem; margin-bottom: 6rem; }
+            footer { padding: 1.5rem 1rem; font-size: 0.6rem; }
+        }
+        @media (max-width: 480px) {
+            nav { padding: 0.6rem 1rem; }
+            header { padding: 6rem 1rem 3rem; }
+            h1 { font-size: clamp(1.5rem, 8vw, 2rem); }
+            article { padding: 0 1rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo">Wali <em>Medugu</em></a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+    </ul>
+
+    <header>
+        <span class="label">Personal Reflections</span>
+        <h1>01. the dinner</h1>
+        <div class="meta">
+            <span>March 20, 2024</span>
+            <span>4 min read</span>
+        </div>
+    </header>
+
+    <article>
+        <p>i didn't know it was happening. that's the part i keep going back to. i genuinely did not know. Mutma and Moyo had been coordinating behind my back for what i can only assume was a suspicious amount of time, and i walked into Palm Ave completely unprepared for what was about to happen to me.</p>
+
+        <p>the place was nice. nicer than i expected. the kind of restaurant that makes you sit up slightly straighter without anyone telling you to. we got seats, ordered food, did the normal thing. i was happy just being there honestly. these are two of my favourite people and abuja has a way of making it hard to actually sit down with your favourite people so i was already grateful before anything else happened.</p>
+
+        <p>and then the staff came out. singing. full singing. birthday song. directed at me. in public. with witnesses.</p>
+
+        <p>i did not know where to look. i did the thing where you smile so hard your face hurts because you're genuinely touched but also genuinely want to evaporate. Mutma was filming. of course she was filming.</p>
+
+        <p>the teddy bears were everywhere in that place and we took pictures with basically all of them. there's something about two people who are deeply unserious getting access to giant stuffed animals that just... produces content. we were there for a while with those bears.</p>
+
+        <p>at some point during the night we got onto the topic of the future. the way you do when you're young and full and happy and surrounded by people who actually believe in you. billionaires. that's where we landed. not in a delusional way. in the way that feels completely reasonable at 9pm with good food in front of you and your people beside you.</p>
+
+        <p>we're going to be billionaires. i'm writing it here so it's documented.</p>
+
+        <p>we left eventually. full and happy and a little loud. the kind of night that doesn't need a grand ending because the whole thing was already the ending. i'm grateful for them. genuinely. the people who plan things for you without being asked are a specific and irreplaceable kind of person.</p>
+
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+    </article>
+
+    <footer>
+        <p>© 2025 <em>Wali Medugu</em> — Made with care</p>
+    </footer>
+
+    <script>
+        (function() {
+            const hamburger = document.getElementById('hamburger-toggle');
+            const navLinks = document.getElementById('nav-links');
+            const navOverlay = document.getElementById('nav-overlay');
+            function toggleMenu() { const isOpen = hamburger.classList.toggle('active'); navLinks.classList.toggle('active'); navOverlay.classList.toggle('active'); document.body.classList.toggle('menu-open'); hamburger.setAttribute('aria-expanded', isOpen); }
+            function closeMenu() { hamburger.classList.remove('active'); navLinks.classList.remove('active'); navOverlay.classList.remove('active'); document.body.classList.remove('menu-open'); hamburger.setAttribute('aria-expanded', 'false'); }
+            hamburger.addEventListener('click', toggleMenu);
+            navOverlay.addEventListener('click', closeMenu);
+            navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', closeMenu); });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+            window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMenu(); });
+        })();
+    </script>
+</body>
+
+</html>
