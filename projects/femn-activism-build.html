@@ -234,6 +234,7 @@
         @media (max-width: 480px) {
             nav { padding: 0.6rem 1rem; }
             header { padding: 6rem 1rem 3rem; }
+            .nav-logo img { height: 42px !important; }
             h1 { font-size: clamp(1.5rem, 8vw, 2rem); }
             article { padding: 0 1rem; }
             .featured-image { height: 200px; }
@@ -243,8 +244,11 @@
 
 <body>
     <nav>
-        <a href="../index.html" class="nav-logo">Wali <em>Medugu</em></a>
-                <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home">
+            <img src="../assets/sign_transparent.png" alt="Wali Medugu Logo"
+                style="height: 56px; width: auto; object-fit: contain;">
+        </a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>

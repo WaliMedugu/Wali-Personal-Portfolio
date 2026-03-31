@@ -9,6 +9,7 @@
     <meta name="keywords" content="Wali Medugu, Blog, Cyberpunk 2077, Phantom Liberty, V, So Mi, Reed, gaming, decision making" />
     <meta name="author" content="Wali Medugu" />
     <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/jpeg" href="../assets/me.jpg" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link
@@ -65,6 +66,7 @@
         }
         @media (max-width: 480px) {
             nav { padding: 0.6rem 1rem; }
+            .nav-logo img { height: 42px !important; }
             header { padding: 6rem 1rem 3rem; }
             h1 { font-size: clamp(1.5rem, 8vw, 2rem); }
             article { padding: 0 1rem; }
@@ -75,8 +77,11 @@
 
 <body>
     <nav>
-        <a href="../index.html" class="nav-logo">Wali <em>Medugu</em></a>
-                <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home">
+            <img src="../assets/sign_transparent.png" alt="Wali Medugu Logo"
+                style="height: 56px; width: auto; object-fit: contain;">
+        </a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
             <span></span>
             <span></span>
             <span></span>

@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>that one girl | Wali Medugu Blog</title>
+    <meta name="description" content="A reflection on a person who reminds me of the colour green. Calm, alive, and present." />
+    <meta name="keywords" content="Wali Medugu, Blog, that one girl, reflections, friendship, green" />
+    <meta name="author" content="Wali Medugu" />
+    <meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/jpeg" href="../assets/me.jpg" />
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="article" />
+    <meta property="og:title" content="that one girl | Wali Medugu Blog" />
+    <meta property="og:description" content="there's this person i know who reminds me of green. not in a way i can fully explain and i've tried." />
+    <meta property="og:url" content="https://walimedugu.com/blog/that-one-girl.html" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap"
+        rel="stylesheet">
+
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+        :root { 
+            --cream: #faf6f0; 
+            --warm-white: #fdf9f4; 
+            --sand: #e8ddd0; 
+            --tan: #c9b99e; 
+            --terracotta: #c4724a; 
+            --rust: #a85535; 
+            --brown: #5c3d2e; 
+            --dark: #2a1f17; 
+            --text: #3d2b1f; 
+            --text-light: #7a5c4a; 
+            --ink: #1a110a;
+            --sage: #7d8c7d;
+            --forest: #2d3b2d;
+        }
+        body { background: var(--cream); color: var(--text); font-family: 'Lora', serif; line-height: 1.8; font-size: 18px; overflow-x: hidden; width: 100%; }
+        body::before { content: ''; position: fixed; inset: 0; background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 512 512' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)' opacity='0.04'/%3E%3C/svg%3E"); pointer-events: none; z-index: 9999; opacity: 0.6; }
+        nav { position: fixed; top: 0; left: 0; right: 0; z-index: 10003; display: flex; justify-content: space-between; align-items: center; padding: 0.5rem 1.5rem; background: rgba(250, 246, 240, 0.85); backdrop-filter: blur(12px); border-bottom: 1px solid rgba(201, 185, 158, 0.3); }
+        .nav-logo { font-family: 'Playfair Display', serif; font-style: italic; font-size: 1.3rem; color: var(--terracotta); text-decoration: none; }
+        .nav-links { position: fixed; top: 0; right: 1.5rem; height: 56px; display: flex; align-items: center; gap: 2.5rem; list-style: none; z-index: 10004; }
+        .nav-links a { font-family: 'DM Mono', monospace; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.12em; color: var(--text-light); text-decoration: none; }
+        header { padding: 12rem 2rem 6rem; max-width: 800px; margin: 0 auto; text-align: center; }
+        .label { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--sage); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 1rem; display: block; }
+        h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4.5rem); color: var(--forest); line-height: 1.1; margin-bottom: 2rem; }
+        .meta { font-family: 'DM Mono', monospace; font-size: 0.7rem; color: var(--tan); text-transform: uppercase; letter-spacing: 0.1em; display: flex; justify-content: center; gap: 2rem; }
+        article { max-width: 750px; margin: 0 auto 10rem; padding: 0 2rem; }
+        article p { margin-bottom: 2rem; position: relative; }
+        .highlight-green { color: var(--forest); font-weight: 500; }
+        .back-link { display: block; font-family: 'DM Mono', monospace; font-size: 0.8rem; color: var(--terracotta); text-decoration: none; margin-top: 6rem; text-align: center; text-transform: uppercase; letter-spacing: 0.1em; }
+        footer { background: var(--ink); color: rgba(250, 246, 240, 0.35); text-align: center; padding: 4rem 2rem; font-family: 'DM Mono', monospace; font-size: 0.65rem; letter-spacing: 0.1em; text-transform: uppercase; }
+        footer em { color: var(--terracotta); font-style: normal; }
+
+        /* Custom accent for this post */
+        .article-accent {
+            width: 40px;
+            height: 2px;
+            background: var(--sage);
+            margin: 4rem auto;
+            opacity: 0.5;
+        }
+
+        /* COLLAGE STYLES */
+        .collage-container {
+            display: grid;
+            grid-template-columns: repeat(6, 1fr);
+            grid-auto-rows: 150px;
+            gap: 15px;
+            margin: 4rem -5vw;
+            padding: 0 2rem;
+        }
+
+        .collage-item {
+            position: relative;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            transition: transform 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+        }
+
+        .collage-item:hover {
+            transform: scale(1.02);
+            z-index: 2;
+        }
+
+        .collage-item img, 
+        .collage-item video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+        }
+
+        /* Responsive Collage Layout */
+        .item-1 { grid-column: span 3; grid-row: span 3; }
+        .item-2 { grid-column: span 3; grid-row: span 2; }
+        .item-3 { grid-column: span 3; grid-row: span 2; }
+        .item-4 { grid-column: span 3; grid-row: span 2; }
+        .item-5 { grid-column: span 6; grid-row: span 3; }
+
+        @media (max-width: 768px) {
+            .collage-container {
+                grid-template-columns: repeat(2, 1fr);
+                grid-auto-rows: 200px;
+                margin: 3rem 0;
+                padding: 0;
+            }
+            .item-1 { grid-column: span 2; grid-row: span 2; }
+            .item-2 { grid-column: span 1; grid-row: span 1; }
+            .item-3 { grid-column: span 1; grid-row: span 1; }
+            .item-4 { grid-column: span 2; grid-row: span 2; }
+            .item-5 { grid-column: span 2; grid-row: span 1; }
+        }
+
+        /* HAMBURGER MENU */
+        .hamburger { display: none; flex-direction: column; justify-content: center; gap: 5px; width: 28px; height: 28px; cursor: pointer; z-index: 10002; background: none; border: none; padding: 0; -webkit-tap-highlight-color: transparent; }
+        .hamburger span { display: block; width: 100%; height: 2px; background: var(--brown); border-radius: 2px; transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.25s ease; transform-origin: center; }
+        .hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+        .hamburger.active span:nth-child(2) { opacity: 0; }
+        .hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+        .nav-overlay { display: none; }
+        body.menu-open { overflow: hidden; }
+
+        @media (max-width: 768px) {
+            .hamburger { display: flex; }
+            .nav-overlay { display: block; position: fixed; inset: 0; background: rgba(250, 246, 240, 0.97); backdrop-filter: blur(20px); z-index: 10000; opacity: 0; visibility: hidden; transition: opacity 0.35s ease, visibility 0.35s ease; }
+            .nav-overlay.active { opacity: 1; visibility: visible; }
+            .nav-links { position: fixed; top: 0; left: 0; right: 0; bottom: 0; height: 100vh; z-index: 10004; display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2.5rem; opacity: 0; visibility: hidden; transition: opacity 0.35s ease, visibility 0.35s ease; pointer-events: none; }
+            .nav-links.active { opacity: 1; visibility: visible; pointer-events: auto; }
+            .nav-links a { font-size: 1rem; letter-spacing: 0.15em; padding: 0.75rem 1.5rem; }
+            .nav-links li { opacity: 0; transform: translateY(20px); transition: opacity 0.3s ease, transform 0.3s ease; }
+            .nav-links.active li { opacity: 1; transform: translateY(0); }
+            .nav-links.active li:nth-child(1) { transition-delay: 0.1s; }
+            .nav-links.active li:nth-child(2) { transition-delay: 0.18s; }
+            .nav-links.active li:nth-child(3) { transition-delay: 0.26s; }
+            nav { padding: 0.75rem 1.25rem; }
+            .nav-logo img { height: 42px !important; }
+            header { padding: 7rem 1.5rem 4rem; }
+            h1 { font-size: clamp(1.8rem, 7vw, 2.5rem); }
+            .meta { flex-direction: column; gap: 0.5rem; }
+            article { padding: 0 1.25rem; margin-bottom: 6rem; }
+            footer { padding: 1.5rem 1rem; font-size: 0.6rem; }
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home">
+            <img src="../assets/sign_transparent.png" alt="Wali Medugu Logo"
+                style="height: 56px; width: auto; object-fit: contain;">
+        </a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false">
+            <span></span>
+            <span></span>
+            <span></span>
+        </button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../projects.html">Projects</a></li>
+            <li><a href="../blog.html">Blog</a></li>
+    </ul>
+
+    <header>
+        <span class="label">Personal Reflections</span>
+        <h1>02. that one girl</h1>
+        <div class="meta">
+            <span>March 19, 2026</span>
+            <span>3 min read</span>
+        </div>
+    </header>
+
+    <article>
+        <p>there's this person i know who reminds me of <span class="highlight-green">green</span>. not in a way i can fully explain and i've tried. it's not a mood exactly and it's not just an aesthetic thing. it's more like a quality. the way green feels when it's the right shade in the right light. calm but quietly alive. present without asking anything from you. the kind of colour that doesn't announce itself but changes the whole feel of a room just by being in it.</p>
+
+        <p>i think it started with a dress she wore once. i saw it and i had to genuinely stop and recalibrate. like okay. noted. this is not a regular person. this is someone who exists at a different frequency and doesn't seem to know it. i wanted to send pictures to everyone i know and say look. just look. but i don't think she'd have understood why i was making such a fuss. that's kind of the thing about her.</p>
+
+        <p>her name is <span class="highlight-green">Divine</span> and she is exactly that.</p>
+
+        <p>she's optimistic in the real way. not the performed kind. not the kind that lives in instagram captions about choosing joy and soft life aesthetics. the kind that comes from actually believing at a foundational level, not as a coping mechanism, that things can be good. that people are mostly trying. that the world has more warmth in it than the news would have you think. that kind of optimism is rarer than people admit. most of us are optimistic in theory and quietly exhausted in practice. we say we believe things will work out while privately preparing for them not to. Divine doesn't carry it like that. she carries it like a decision she made about the world a long time ago and hasn't seen enough reason to revisit.</p>
+
+        <p>she's political too. and smart in the way that makes conversation feel like it's going somewhere. she has opinions and she can defend them and she's curious about yours in a way that feels genuine rather than polite. she grew up in one of those homes you can feel the warmth of even secondhand. the kind of family that explains a lot about why a person turns out the way they do. grounded. loving. the kind of background that gives you roots instead of weight. meeting her and hearing about her family made me understand her better almost immediately. some people are who they are despite where they came from. Divine is who she is because of it.</p>
+
+        <div class="collage-container">
+            <div class="collage-item item-1">
+                <img src="../assets/blogs/divine/06c49ceec83701c84047d5537d3e9faf.jpg" alt="Divine Inspiration 1" loading="lazy">
+            </div>
+            <div class="collage-item item-2">
+                <img src="../assets/blogs/divine/5013f5283f75524aab600368dd3989ff.jpg" alt="Divine Inspiration 2" loading="lazy">
+            </div>
+            <div class="collage-item item-3">
+                <img src="../assets/blogs/divine/910d7ace738c084f5fb5e297b1e26cd5.jpg" alt="Divine Inspiration 3" loading="lazy">
+            </div>
+            <div class="collage-item item-4">
+                <img src="../assets/blogs/divine/Il colore e' poesia dell'anima.jpeg" alt="Divine Inspiration 4" loading="lazy">
+            </div>
+            <div class="collage-item item-5">
+                <img src="../assets/blogs/divine/da8d1513832395a19e4fcddce3240b20.jpg" alt="Divine Inspiration 5" loading="lazy">
+            </div>
+        </div>
+
+        <div class="article-accent"></div>
+
+        <p>i should also mention, for full transparency and historical accuracy, that when i first messaged her on WhatsApp she took approximately six months to reply.</p>
+
+        <p>and then six more months to reply to the second message.</p>
+
+        <p>i am not exaggerating. i wish i were. i checked.</p>
+
+        <p>i'm not holding it against her. clearly. because the moment we actually started talking properly i forgot about the wait almost completely. that's what happens when a conversation is good enough. the timeline dissolves. you stop caring about how long it took to get there and you just become grateful that you're there at all. there's something she does in conversation that makes you feel like you have her full attention. like what you're saying is actually landing somewhere rather than just being received and filed away. it's not a common thing. i notice when people don't do it. i definitely noticed when she did.</p>
+
+        <p>she's also funny in the way that sneaks up on you. not performing humour. just genuinely seeing things at a slightly unexpected angle and saying so. the kind of person who makes a comment under her breath that's more interesting than the main conversation.</p>
+
+        <p>she doesn't fully know how beautiful she is yet. i've noticed that about her. she'll receive a compliment and something in her face does this small uncertain thing, like she's not sure it applies to her specifically. like maybe you meant someone else or you're being generous or the light was just particularly good that day. it doesn't apply to her like a maybe. it applies completely. but that's the kind of thing a person has to arrive at on their own schedule. you can't argue someone into knowing their worth. you can only keep telling the truth and trust that it accumulates into something she believes eventually.</p>
+
+        <p>meeting Divine has been one of the genuinely lovely things that's happened to me in a season that has had a lot going on in it. new friendships at this stage of life hit differently. you're more aware of what you're looking for. more aware of what you're not willing to settle for. and every once in a while someone shows up who makes you think oh. this is what it's supposed to feel like. easy and interesting and warm without any of the performance.</p>
+
+        <p style="text-align: center; font-style: italic; color: var(--sage); margin-top: 4rem;">green. calm. alive. present.</p>
+        <p style="text-align: center; font-style: italic; color: var(--sage);">that's her.</p>
+
+        <p style="margin-top: 4rem; font-size: 0.9rem; color: var(--tan);">i'm glad the second message eventually got a reply.</p>
+
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+    </article>
+
+    <footer>
+        <p>© 2025 <em>Wali Medugu</em> — Made with care</p>
+    </footer>
+
+    <script>
+        (function() {
+            const hamburger = document.getElementById('hamburger-toggle');
+            const navLinks = document.getElementById('nav-links');
+            const navOverlay = document.getElementById('nav-overlay');
+            function toggleMenu() { const isOpen = hamburger.classList.toggle('active'); navLinks.classList.toggle('active'); navOverlay.classList.toggle('active'); document.body.classList.toggle('menu-open'); hamburger.setAttribute('aria-expanded', isOpen); }
+            function closeMenu() { hamburger.classList.remove('active'); navLinks.classList.remove('active'); navOverlay.classList.remove('active'); document.body.classList.remove('menu-open'); hamburger.setAttribute('aria-expanded', 'false'); }
+            hamburger.addEventListener('click', toggleMenu);
+            navOverlay.addEventListener('click', closeMenu);
+            navLinks.querySelectorAll('a').forEach(link => { link.addEventListener('click', closeMenu); });
+            document.addEventListener('keydown', (e) => { if (e.key === 'Escape') closeMenu(); });
+            window.addEventListener('resize', () => { if (window.innerWidth > 768) closeMenu(); });
+        })();
+    </script>
+</body>
+
+</html>
