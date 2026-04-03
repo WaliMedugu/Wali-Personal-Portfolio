@@ -720,6 +720,37 @@
             gap: 0.7rem;
         }
 
+        .project-actions {
+            margin-top: auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .github-link {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            background: var(--sand);
+            color: var(--dark);
+            transition: all 0.2s ease;
+            text-decoration: none;
+        }
+
+        .github-link:hover {
+            background: var(--terracotta);
+            color: white;
+            transform: scale(1.1);
+        }
+
+        .github-link svg {
+            width: 18px;
+            height: 18px;
+        }
+
         /* SKILLS */
         #skills {
             background: var(--cream);
@@ -1736,17 +1767,28 @@
                 const featured = projects.filter(p => p.featured).slice(0, 3);
                 if (featured.length > 0) {
                     container.innerHTML = featured.map(project => `
-                        <a href="${project.link}" class="project-card">
-                            <div class="project-thumb">
-                                <span class="project-tag">${project.tag}</span>
-                                <img src="${project.image}" alt="${project.title}" style="width: 100%; height: 100%; object-fit: cover;">
-                            </div>
-                            <div class="project-body">
-                                <h3>${project.title}</h3>
-                                <p>${project.description}</p>
-                                <span class="project-link">View Project →</span>
-                            </div>
-                        </a>
+                        <div class="project-card">
+                            <a href="${project.link}" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+                                <div class="project-thumb">
+                                    <span class="project-tag">${project.tag}</span>
+                                    <img src="${project.image}" alt="${project.title}" style="width: 100%; height: 100%; object-fit: cover;">
+                                </div>
+                                <div class="project-body" style="display: flex; flex-direction: column; flex-grow: 1;">
+                                    <h3>${project.title}</h3>
+                                    <p>${project.description}</p>
+                                    <div class="project-actions">
+                                        <span class="project-link">View Project →</span>
+                                        ${project.github ? `
+                                            <a href="${project.github}" class="github-link" target="_blank" rel="noopener noreferrer" title="View Source on GitHub" onclick="event.stopPropagation();">
+                                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                    <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                                                </svg>
+                                            </a>
+                                        ` : ''}
+                                    </div>
+                                </div>
+                            </a>
+                        </div>
                     `).join('');
                 } else {
                     container.innerHTML = '<p style="color:var(--tan); font-style:italic; grid-column: 1/-1; text-align:center;">The workshop is quiet for now.</p>';

@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>walimedugu.com | Wali Medugu Portfolio</title>
-    <meta name="description"
-        content="The durable design system and personal portfolio of Wali Medugu. A story of identity organized around developer, writer, and activist roles." />
+    <title>walimedugu.com; The Problem Of Presenting Yourself Honestly | Wali Medugu</title>
+    <meta name="description" content="I built the portfolio site because I needed one. Then I rebuilt it repeatedly because the version I had kept becoming inaccurate. Not technically. The code..." />
     <meta name="keywords"
         content="Wali Medugu, Portfolio Site, Design System, Warm Editorial, Terracotta, Cream, Developer, Writer, Activist" />
     <meta name="author" content="Wali Medugu" />
@@ -16,15 +15,13 @@
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="walimedugu.com | Wali Medugu Portfolio" />
-    <meta property="og:description"
-        content="A story of identity organized around developer, writer, and activist roles." />
+    <meta property="og:title" content="walimedugu.com; The Problem Of Presenting Yourself Honestly | Wali Medugu" />
+    <meta property="og:description" content="I built the portfolio site because I needed one. Then I rebuilt it repeatedly because the version I had kept becoming inaccurate. Not technically. The code..." />
     <meta property="og:image" content="../assets/project6.png" />
     <meta property="og:url" content="https://walimedugu.com/projects/portfolio-site.html" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="walimedugu.com | Wali Medugu Portfolio" />
-    <meta name="twitter:description"
-        content="A story of identity organized around developer, writer, and activist roles." />
+    <meta name="twitter:title" content="walimedugu.com; The Problem Of Presenting Yourself Honestly | Wali Medugu" />
+    <meta name="twitter:description" content="I built the portfolio site because I needed one. Then I rebuilt it repeatedly because the version I had kept becoming inaccurate. Not technically. The code..." />
     <meta name="twitter:image" content="../assets/project6.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -46,6 +43,36 @@
         header { text-align: center; margin-bottom: 6rem; }
         .label { font-family: 'DM Mono', monospace; font-size: 0.75rem; color: var(--terracotta); text-transform: uppercase; letter-spacing: 0.2em; margin-bottom: 1rem; display: block; }
         h1 { font-family: 'Playfair Display', serif; font-size: clamp(2.5rem, 5vw, 4.5rem); color: var(--ink); line-height: 1.1; margin-bottom: 2rem; }
+        .header-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+        .github-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--dark);
+            color: var(--cream);
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+        }
+        .github-btn:hover {
+            background: var(--terracotta);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(196, 114, 74, 0.2);
+        }
+        .github-btn svg {
+            width: 18px;
+            height: 18px;
+        }
         .featured-image { width: 100%; height: 500px; margin-bottom: 6rem; border-radius: 4px; overflow: hidden; box-shadow: 0 30px 60px rgba(92, 61, 46, 0.1); }
         .featured-image img { width: 100%; height: 100%; object-fit: cover; }
         .content { max-width: 750px; margin: 0 auto; }
@@ -116,7 +143,15 @@
     <article>
         <header>
             <span class="label">Portfolio / Design Systems</span>
-            <h1>06. walimedugu.com</h1>
+            <h1>walimedugu.com; The Problem Of Presenting Yourself Honestly</h1>
+            <div class="header-actions">
+                <a href="https://github.com/WaliMedugu/Wali-Personal-Portfolio" class="github-btn" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    GitHub Repository
+                </a>
+            </div>
         </header>
 
         <section class="featured-image">
@@ -124,13 +159,13 @@
         </section>
 
         <section class="content">
-            <p>I built my portfolio site because I needed one. Then I kept rebuilding it because I couldn't get it right. Not technically — the code was always fine. But the question of what the site was supposed to say about me kept changing, because I kept changing, and I didn't want the site to be a lie by the time someone visited it.</p>
+            <p>I built the portfolio site because I needed one. Then I rebuilt it repeatedly because the version I had kept becoming inaccurate. Not technically. The code was always functional. But a portfolio is not a technical document. It is a claim about who you are, and who I was kept changing, and I did not want the site to be out of date by the time someone visited it.</p>
 
-            <p>The version I settled on is organised around three things. Developer, writer, activist. That ordering is not accidental. Developer comes first because it's what most people expect to find, and I wanted to meet that expectation before complicating it. Writer comes second because it is the oldest part of my identity — I was writing long before I was building anything in any technical sense. Activist comes third not because it matters least but because it's the most serious claim I make about myself, and I wanted it to land with the weight it deserves.</p>
+            <p>The version I settled on organises itself around three identities: developer, writer, activist. The ordering is deliberate. Developer comes first because it is what most visitors expect to find, and meeting that expectation before complicating it is a more respectful way to introduce complexity. Writer comes second because it is the oldest part of my identity I was writing, seriously and with intent, long before I was building anything in a technical sense. Activist comes third not because it is least important but because it is the most serious claim in the sequence, and serious claims earn their weight by arriving after the context that makes them legible.</p>
 
-            <p>The design system that came out of this project is probably the most durable thing I've made. Terracotta. Cream. Grain. Playfair Display in italic. Lora for body text. DM Mono for everything that needs to feel precise. It runs through every product I build now, every document I produce, every interface I design. It didn't exist before this site. I invented it here, through iteration, trying to find a visual language that felt honestly like me rather than like something I borrowed from someone else.</p>
+            <p>The design system that emerged from this project is the most durable artefact I have produced. The Warm Editorial system terracotta, cream, grain texture, Playfair Display in italic, Lora for body text, DM Mono for precision elements did not exist before this site. It was invented here, through iteration, as I tried to find a visual language that felt honestly like mine rather than borrowed from somewhere else. It now runs through every product I build, every document I produce, every interface I design. It is the most consistent thing across everything I make, and it started here.</p>
 
-            <p>A portfolio is a strange document. It is proof of work but it is also a story about what the work means. I spent more time on the copy than I did on the code. The copy is what I would want someone to read if they only had five minutes and I wasn't there to explain myself.</p>
+            <p>A portfolio is a strange document because it serves two functions simultaneously. It is proof of work, which is a relatively straightforward thing to demonstrate. And it is a story about what the work means, which is considerably harder. I spent more time on the copy than on the code. The copy is what I would want someone to read if they had five minutes, no prior context, and I was not present to explain myself. Getting that right mattered more to me than any technical decision in the build.</p>
         </section>
 
         <a href="../projects.html" class="project-link-footer">← Back to Projects</a>

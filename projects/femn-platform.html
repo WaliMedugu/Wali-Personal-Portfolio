@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Femn — The Platform | Wali Medugu</title>
-    <meta name="description"
-        content="A civic social platform built for feminist activism in Nigeria. Redefining digital organizing through resonance metrics like 'Embers'." />
+    <title>Femn; On Building For The Margins | Wali Medugu</title>
+    <meta name="description" content="There is a particular kind of frustration that comes from opening a document and realising that the thing it describes does not actually exist yet. Not in ..." />
     <meta name="keywords"
         content="Wali Medugu, Femn, Feminist Activism Nigeria, Civic Tech, Flutter, React, Embers Metric, Digital Organizing" />
     <meta name="author" content="Wali Medugu" />
@@ -16,15 +15,13 @@
 
     <!-- Open Graph / Social -->
     <meta property="og:type" content="article" />
-    <meta property="og:title" content="Femn — The Platform | Wali Medugu" />
-    <meta property="og:description"
-        content="A civic social platform built for feminist activism in Nigeria. Redefining digital organizing through resonance metrics like 'Embers'." />
+    <meta property="og:title" content="Femn; On Building For The Margins | Wali Medugu" />
+    <meta property="og:description" content="There is a particular kind of frustration that comes from opening a document and realising that the thing it describes does not actually exist yet. Not in ..." />
     <meta property="og:image" content="../assets/project1.png" />
     <meta property="og:url" content="https://walimedugu.com/projects/femn-platform.html" />
     <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Femn — The Platform | Wali Medugu" />
-    <meta name="twitter:description"
-        content="A civic social platform built for feminist activism in Nigeria. Redefining digital organizing through resonance metrics like 'Embers'." />
+    <meta name="twitter:title" content="Femn; On Building For The Margins | Wali Medugu" />
+    <meta name="twitter:description" content="There is a particular kind of frustration that comes from opening a document and realising that the thing it describes does not actually exist yet. Not in ..." />
     <meta name="twitter:image" content="../assets/project1.png" />
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -149,6 +146,40 @@
             margin-bottom: 2rem;
         }
 
+        .header-actions {
+            display: flex;
+            justify-content: center;
+            gap: 1.5rem;
+            margin-bottom: 4rem;
+        }
+
+        .github-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.8rem;
+            background: var(--dark);
+            color: var(--cream);
+            padding: 0.8rem 1.5rem;
+            border-radius: 4px;
+            text-decoration: none;
+            font-family: 'DM Mono', monospace;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            transition: all 0.3s ease;
+        }
+
+        .github-btn:hover {
+            background: var(--terracotta);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(196, 114, 74, 0.2);
+        }
+
+        .github-btn svg {
+            width: 18px;
+            height: 18px;
+        }
+
         .featured-image {
             width: 100%;
             height: 500px;
@@ -264,7 +295,15 @@
     <article>
         <header>
             <span class="label">Flutter / React / Civic Tech</span>
-            <h1>01. Femn — The Platform</h1>
+            <h1>Femn; On Building For The Margins</h1>
+            <div class="header-actions">
+                <a href="https://github.com/WaliMedugu/Femn-Mobile-" class="github-btn" target="_blank" rel="noopener noreferrer">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                    </svg>
+                    GitHub Repository
+                </a>
+            </div>
         </header>
 
         <section class="featured-image">
@@ -272,13 +311,17 @@
         </section>
 
         <section class="content">
-            <p>The first version of Femn was just a document. A Software Requirements Specification I was supposed to review. But when I started going through it I found things that didn't work. Navigation that went nowhere. Features defined but never connected. Code that existed only as intention.</p>
+            <p>There is a particular kind of frustration that comes from opening a document and realising that the thing it describes does not actually exist yet. Not in any functional sense. The navigation goes nowhere. The features are named but not connected. The code is intention dressed up as implementation. That was the first version of Femn's Software Requirements Specification. I was supposed to review it. I reviewed it, found what was broken, and then stayed.</p>
 
-            <p>I could have noted the issues and moved on. I didn't. Femn became the project I kept returning to. Not because it was the most technically demanding thing on my plate but because what it was trying to do mattered. A civic social platform built around feminist activism. In Nigeria. For people who are exhausted from organizing in the margins of platforms that were never built with them in mind. That's not a small thing to attempt and I didn't want to treat it like one.</p>
+            <p>That decision to stay rather than note and move on is the one that defined the next several months of my life as a developer.</p>
 
-            <p>We moved from the broken SRS to a prototype. HTML, CSS, JavaScript, each screen built by hand to test whether the flows actually made sense to a real person using them. Then React. Then Flutter. Every iteration forced a clearer answer to the same question: what does this platform actually need to do? The Embers metric came out of that process. Instead of likes and shares, Embers measures resonance. It sounds like a small distinction. The philosophy behind it isn't small at all.</p>
+            <p>Femn is a civic social platform oriented around feminist activism in Nigeria. The premise is simple and the execution is not: build a space for people who are exhausted from organising in the margins of platforms that were never designed with them in mind. Twitter threads. WhatsApp groups. Instagram stories that expire in twenty-four hours. These are the tools Nigerian activists currently use because there is nothing built specifically for them. Femn is an attempt to change that.</p>
 
-            <p>I built the DMs. The group chats. The settings, the analytics, the post types. Piece by piece, mostly alone, over months of returning to the same codebase and finding new things to fix. Femn is still not finished. But it is more real than it has ever been. And I understand now what I didn't when I first opened that document — that building something well is mostly a practice of refusing to walk away.</p>
+            <p>The build moved through several iterations. HTML and CSS first, then React, then Flutter. Each migration forced a clearer answer to the question that should drive every product decision: what does this platform actually need to do? Not what is technically possible. Not what would be impressive in a demo. What does the person it is built for actually need when they open it?</p>
+
+            <p>The Embers metric came out of that process. Rather than likes and shares metrics that measure reach and agreement Embers measures resonance. The distinction is philosophical before it is technical. Reach tells you how many people saw something. Resonance asks whether it moved them. Building that distinction into the platform's core logic was a deliberate argument about what kind of attention is worth measuring.</p>
+
+            <p>I built the direct messaging system, the group chat infrastructure, the settings architecture, the analytics layer, the post types. Piece by piece, mostly alone, over months of returning to the same codebase and finding new things to improve. Femn is still not finished. But it is more real than it has ever been, and the distance between what it was when I first opened that document and what it is now is the truest record of what sustained attention to a hard problem looks like.</p>
         </section>
 
         <a href="../projects.html" class="project-link-footer">← Back to Projects</a>
