@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>soft brutalism | Wali Medugu Blog</title>
+    <meta name="description" content="i have very specific opinions on fonts. inter for the readable stuff. comfortaa for the headers." />
+    <meta name="author" content="Wali Medugu" /><meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/jpeg" href="../assets/me.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/blog-post.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home"><img src="../assets/sign_transparent.png" alt="Wali Medugu Logo" style="height:56px;width:auto;object-fit:contain;"></a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <header>
+        <span class="label">Design / UI &amp; UX</span>
+        <h1>15. soft brutalism</h1>
+        <div class="meta"><span>May 1, 2026</span><span>4 min read</span></div>
+    </header>
+    <article>
+        <p>i have very specific opinions on fonts.</p>
+        <p>inter for the readable stuff because it's clean and doesn't play games with the user's eyes. comfortaa for the headers when you need something that feels a bit more human, a bit more rounded. lately, i've been designing almost entirely in this soft brutalist style. bento grids everywhere. clean borders, heavy lines, but balanced out with soft pastel backgrounds and generous spacing so it doesn't feel aggressive.</p>
+        <p>there is something so honest about it. it doesn't try to hide the structural layout of the application behind gradients or drop shadows; it just makes the structure look entirely deliberate. UI/UX shouldn't get in the way of what the user came to do. it should guide them smoothly without them even noticing they're being guided.</p>
+        <div class="collage-container">
+            <div class="collage-item item-1"><img src="../assets/blogs/soft-brutalism/img1.jpg" alt="Bento grid UI design" loading="lazy"></div>
+            <div class="collage-item item-2"><img src="../assets/blogs/soft-brutalism/img2.jpg" alt="Minimal typography layout" loading="lazy"></div>
+            <div class="collage-item item-3"><img src="../assets/blogs/soft-brutalism/img3.jpg" alt="Soft pastel UI components" loading="lazy"></div>
+            <div class="collage-item item-4"><img src="../assets/blogs/soft-brutalism/img4.jpg" alt="Design system flat lay" loading="lazy"></div>
+            <div class="collage-item item-5"><img src="../assets/blogs/soft-brutalism/img5.jpg" alt="Brutalist web design aesthetic" loading="lazy"></div>
+        </div>
+        <p>minimalist but not boring. that's the sweet spot i'm always trying to hit across all our landing pages. if you look at the stuff we're shipping at blue particle studios right now, you can see the progression. it's structured, it's flat, but it feels quietly alive.</p>
+        <p>bento grids specifically do something interesting to information hierarchy. they let you present a lot of data in a way that doesn't feel overwhelming because the grid itself does the organizing work for you. the user's eye knows where to start. the layout creates implicit priority without you having to spell it out with arrows and callouts.</p>
+        <p>i think good design is ultimately about reducing the number of decisions the user has to make. every element on screen is either helping them or adding to the cognitive load. the goal is to get that ratio as close to 100% helpful as possible. soft brutalism, done right, is really efficient at that.</p>
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+    </article>
+    <footer><p>© 2025 <em>Wali Medugu</em> — Made with care</p></footer>
+    <script>
+        (function(){const h=document.getElementById('hamburger-toggle'),n=document.getElementById('nav-links'),o=document.getElementById('nav-overlay');function t(){const i=h.classList.toggle('active');n.classList.toggle('active');o.classList.toggle('active');document.body.classList.toggle('menu-open');h.setAttribute('aria-expanded',i);}function c(){h.classList.remove('active');n.classList.remove('active');o.classList.remove('active');document.body.classList.remove('menu-open');h.setAttribute('aria-expanded','false');}h.addEventListener('click',t);o.addEventListener('click',c);n.querySelectorAll('a').forEach(l=>l.addEventListener('click',c));document.addEventListener('keydown',e=>{if(e.key==='Escape')c();});window.addEventListener('resize',()=>{if(window.innerWidth>768)c();});})();
+    </script>
+</body>
+</html>

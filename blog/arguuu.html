@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>argu.uu | Wali Medugu Blog</title>
+    <meta name="description" content="building a 1v1 debate platform is harder than i thought." />
+    <meta name="author" content="Wali Medugu" /><meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/jpeg" href="../assets/me.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/blog-post.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home"><img src="../assets/sign_transparent.png" alt="Wali Medugu Logo" style="height:56px;width:auto;object-fit:contain;"></a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <header>
+        <span class="label">Building / Technology</span>
+        <h1>07. Arguuu</h1>
+        <div class="meta"><span>February 28, 2026</span><span>5 min read</span></div>
+    </header>
+    <article>
+        <p>building a 1v1 debate platform is harder than i thought.</p>
+        <p>we're calling it arguuu. flutter on the frontend, supabase holding the backend together, and a lot of late-night existential dread about real-time state management. the core of the entire app is the wit rating system. an elo-based algorithm designed to calculate exactly how well you can argue your point under pressure.</p>
+        <p>it forces real-time thinking. no hiding behind long, delayed text threads where you can consult five different group chats before replying. you're matched, you get a topic, and you go. the logic for the elo calculation took me a while to get right because human interaction doesn't always like to fit cleanly into mathematical formulas. we had to account for streaks, judge bias, and how the rating shifts when a low-ranked user pulls off an absolute masterclass against someone in the top tier.</p>
+        <div class="collage-container">
+            <div class="collage-item item-1"><img src="../assets/blogs/arguuu/img1.jpg" alt="Two people debating" loading="lazy"></div>
+            <div class="collage-item item-2"><img src="../assets/blogs/arguuu/img2.jpg" alt="App UI wireframe" loading="lazy"></div>
+            <div class="collage-item item-3"><img src="../assets/blogs/arguuu/img3.jpg" alt="ELO rating visualization" loading="lazy"></div>
+            <div class="collage-item item-4"><img src="../assets/blogs/arguuu/img4.jpg" alt="Code on screen late night" loading="lazy"></div>
+            <div class="collage-item item-5"><img src="../assets/blogs/arguuu/img5.jpg" alt="Mind map and rhetoric" loading="lazy"></div>
+        </div>
+        <p>but when you see two people matched up perfectly based on their wit rating, the whole thing clicks. people want to be heard. they want to prove they're right. but more than anything, they want a score attached to it so they can show everyone else exactly how smart they are. it's a wild project to build, but watching the test builds actually hold up during live debates makes the insomnia worth it.</p>
+        <p>the AI judge component is the part i keep coming back to. having a language model actually understand rhetorical quality — not just keyword matching — is genuinely hard. it needs to understand when someone is being evasive versus when they're making a nuanced distinction. it needs to recognize when someone's logic is technically valid but emotionally dishonest. these are things humans parse intuitively and that machines have to approximate through architecture.</p>
+        <p>there's also a social design problem embedded in the whole thing. how do you make losing feel okay. how do you design a defeat screen that doesn't send someone into a spiral but also doesn't trivialize the fact that they actually lost. these are product decisions that matter because arguuu isn't supposed to be brutal. it's supposed to be a place where you get better at thinking.</p>
+        <p>we're getting there. slowly. but every build cycle the whole thing feels more real.</p>
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+    </article>
+    <footer><p>© 2025 <em>Wali Medugu</em> — Made with care</p></footer>
+    <script>
+        (function(){const h=document.getElementById('hamburger-toggle'),n=document.getElementById('nav-links'),o=document.getElementById('nav-overlay');function t(){const i=h.classList.toggle('active');n.classList.toggle('active');o.classList.toggle('active');document.body.classList.toggle('menu-open');h.setAttribute('aria-expanded',i);}function c(){h.classList.remove('active');n.classList.remove('active');o.classList.remove('active');document.body.classList.remove('menu-open');h.setAttribute('aria-expanded','false');}h.addEventListener('click',t);o.addEventListener('click',c);n.querySelectorAll('a').forEach(l=>l.addEventListener('click',c));document.addEventListener('keydown',e=>{if(e.key==='Escape')c();});window.addEventListener('resize',()=>{if(window.innerWidth>768)c();});})();
+    </script>
+</body>
+</html>

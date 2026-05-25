@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>styclick and upside | Wali Medugu Blog</title>
+    <meta name="description" content="my calendar is currently a warzone." />
+    <meta name="author" content="Wali Medugu" /><meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/jpeg" href="../assets/me.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/blog-post.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home"><img src="../assets/sign_transparent.png" alt="Wali Medugu Logo" style="height:56px;width:auto;object-fit:contain;"></a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <header>
+        <span class="label">Building / Life Update</span>
+        <h1>18. styclick and upside</h1>
+        <div class="meta"><span>May 20, 2026</span><span>4 min read</span></div>
+    </header>
+    <article>
+        <p>my calendar is currently a warzone.</p>
+        <p>i recently started a remote six-month mobile development internship with UpSide. we had to do some serious negotiating regarding the remote status and the internet allowance because data costs out here will eat your margins alive if you aren't careful. on top of that, i'm the full-time in-house dev at code campus for the styclick project, handling the frontend implementation and ensuring the user flows don't break under load.</p>
+        <p>and because i apparently don't know how to rest, we are pitching aumen — our ai-powered productivity app — at the nile university startup competition 6.0 in a few days. plus i'm still architecting bloodline, the software supply chain contagion mapper. i am actively testing the absolute upper limits of how much code one person can write in a single week without losing their mind.</p>
+        <div class="collage-container">
+            <div class="collage-item item-1"><img src="../assets/blogs/styclick-upside/img1.jpg" alt="Fashion app mobile UI" loading="lazy"></div>
+            <div class="collage-item item-2"><img src="../assets/blogs/styclick-upside/img2.jpg" alt="Multiple screens and coding" loading="lazy"></div>
+            <div class="collage-item item-3"><img src="../assets/blogs/styclick-upside/img3.jpg" alt="Remote work setup" loading="lazy"></div>
+            <div class="collage-item item-4"><img src="../assets/blogs/styclick-upside/img4.jpg" alt="Calendar and planning chaos" loading="lazy"></div>
+            <div class="collage-item item-5"><img src="../assets/blogs/styclick-upside/img5.jpg" alt="Startup pitch presentation" loading="lazy"></div>
+        </div>
+        <p>my IDE is constantly open, my terminal is a steady stream of logs, and my coffee intake is getting slightly concerning. the styclick work is frontend-heavy, which is a different kind of thinking from the arguuu backend work. switching contexts between them requires a deliberate gear shift that i haven't fully systematized yet.</p>
+        <p>the UpSide internship is remote which is both a blessing and a specific kind of discipline challenge. nobody is watching whether you're actually working. the accountability is entirely internal. which, as it turns out, is either exactly my kind of environment or a very fast route to chaos. i'm finding it's mostly the former.</p>
+        <p>we'll see if this semester breaks me. but for now, the compiles are passing.</p>
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+    </article>
+    <footer><p>© 2025 <em>Wali Medugu</em> — Made with care</p></footer>
+    <script>
+        (function(){const h=document.getElementById('hamburger-toggle'),n=document.getElementById('nav-links'),o=document.getElementById('nav-overlay');function t(){const i=h.classList.toggle('active');n.classList.toggle('active');o.classList.toggle('active');document.body.classList.toggle('menu-open');h.setAttribute('aria-expanded',i);}function c(){h.classList.remove('active');n.classList.remove('active');o.classList.remove('active');document.body.classList.remove('menu-open');h.setAttribute('aria-expanded','false');}h.addEventListener('click',t);o.addEventListener('click',c);n.querySelectorAll('a').forEach(l=>l.addEventListener('click',c));document.addEventListener('keydown',e=>{if(e.key==='Escape')c();});window.addEventListener('resize',()=>{if(window.innerWidth>768)c();});})();
+    </script>
+</body>
+</html>

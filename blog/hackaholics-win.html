@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>hackaholics | Wali Medugu Blog</title>
+    <meta name="description" content="1st place hits different when you didn't expect it." />
+    <meta name="author" content="Wali Medugu" /><meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/jpeg" href="../assets/me.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/blog-post.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home"><img src="../assets/sign_transparent.png" alt="Wali Medugu Logo" style="height:56px;width:auto;object-fit:contain;"></a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <header>
+        <span class="label">Building / Milestones</span>
+        <h1>14. hackaholics</h1>
+        <div class="meta"><span>April 24, 2026</span><span>4 min read</span></div>
+    </header>
+    <article>
+        <p>1st place hits different when you didn't expect it.</p>
+        <p>winning the north-central regional finals of wema bank's hackaholics 6.0 back in december still feels a bit surreal when i look back at the photos. you spend weeks prepping, building prototypes, refining the pitch deck, and wondering if your architecture is going to crumble during the live demo. you show up, you look at the competition, and you realize everyone else is just as hungry as you are.</p>
+        <p>you pitch your heart out, you show the actual running code, and then you just stand there and wait for the judges to dissect your soul. and then they call your name for 1st place and the imposter syndrome goes quiet for exactly five minutes while you hold the prize.</p>
+        <div class="collage-container">
+            <div class="collage-item item-1"><img src="../assets/blogs/hackaholics/img1.jpg" alt="Hackathon presentation" loading="lazy"></div>
+            <div class="collage-item item-2"><img src="../assets/blogs/hackaholics/img2.jpg" alt="Trophy and award ceremony" loading="lazy"></div>
+            <div class="collage-item item-3"><img src="../assets/blogs/hackaholics/img3.jpg" alt="Team at hackathon" loading="lazy"></div>
+            <div class="collage-item item-4"><img src="../assets/blogs/hackaholics/img4.jpg" alt="Late night coding session" loading="lazy"></div>
+            <div class="collage-item item-5"><img src="../assets/blogs/hackaholics/img5.jpg" alt="Wema bank fintech challenge" loading="lazy"></div>
+        </div>
+        <p>it's a good feeling. the kind of milestone that fuels the next five projects when you're running on zero sleep and questioning your life choices at 3am. but the trophy doesn't write the next line of code for you. you take the win, you document it for historical accuracy, and then you get right back to work on the things that haven't been solved yet.</p>
+        <p>walletpaddi was the solution we built. a mobile-first savings product that actually understood the nigerian market. not trying to be stripe. not trying to be some global product copied and pasted into a different geography. specifically building for how nigerians actually relate to saving money, to financial trust, to the informal systems that already exist and need a better interface.</p>
+        <p>the hackathon reminded me that i'm actually good at this. at the building part. at seeing a problem and rapidly prototyping a solution. at leading a small team to something that works under pressure. i'd kind of forgotten that. the win was a useful reminder.</p>
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+    </article>
+    <footer><p>© 2025 <em>Wali Medugu</em> — Made with care</p></footer>
+    <script>
+        (function(){const h=document.getElementById('hamburger-toggle'),n=document.getElementById('nav-links'),o=document.getElementById('nav-overlay');function t(){const i=h.classList.toggle('active');n.classList.toggle('active');o.classList.toggle('active');document.body.classList.toggle('menu-open');h.setAttribute('aria-expanded',i);}function c(){h.classList.remove('active');n.classList.remove('active');o.classList.remove('active');document.body.classList.remove('menu-open');h.setAttribute('aria-expanded','false');}h.addEventListener('click',t);o.addEventListener('click',c);n.querySelectorAll('a').forEach(l=>l.addEventListener('click',c));document.addEventListener('keydown',e=>{if(e.key==='Escape')c();});window.addEventListener('resize',()=>{if(window.innerWidth>768)c();});})();
+    </script>
+</body>
+</html>

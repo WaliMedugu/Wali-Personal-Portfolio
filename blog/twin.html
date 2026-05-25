@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>twin | Wali Medugu Blog</title>
+    <meta name="description" content="it's important to celebrate your people." />
+    <meta name="author" content="Wali Medugu" /><meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/jpeg" href="../assets/me.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/blog-post.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home"><img src="../assets/sign_transparent.png" alt="Wali Medugu Logo" style="height:56px;width:auto;object-fit:contain;"></a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <header>
+        <span class="label">Personal Reflections / People</span>
+        <h1>19. twin</h1>
+        <div class="meta"><span>May 24, 2026</span><span>4 min read</span></div>
+    </header>
+    <article>
+        <p>it's important to celebrate your people.</p>
+        <p>i spent some time making a dedicated spotify album cover for talya's birthday recently. she's my twin — not literally, obviously, but practically in every way that matters. when you find people who speak the same frequency as you without you having to explain the code, you hold onto them.</p>
+        <p>when i look at the circle i have around me right now — faith, sophie, ty, munnie, nella, divine, moyo, mutma — i realize how lucky i am to have landed where i did. abuja is a weird city; it can feel incredibly isolating if you don't have a baseline. but this group makes it feel steady.</p>
+        <div class="collage-container">
+            <div class="collage-item item-1"><img src="../assets/blogs/twin/img1.jpg" alt="Birthday celebration aesthetic" loading="lazy"></div>
+            <div class="collage-item item-2"><img src="../assets/blogs/twin/img2.jpg" alt="Spotify album cover design" loading="lazy"></div>
+            <div class="collage-item item-3"><img src="../assets/blogs/twin/img3.jpg" alt="Friends gathering warm light" loading="lazy"></div>
+            <div class="collage-item item-4"><img src="../assets/blogs/twin/img4.jpg" alt="Abuja city evening" loading="lazy"></div>
+            <div class="collage-item item-5"><img src="../assets/blogs/twin/img5.jpg" alt="Circle of friends aesthetic" loading="lazy"></div>
+        </div>
+        <p>the work is great, the applications are shipping, the youtube channel video essays are coming together nicely, but the people are the actual foundation of everything. when the servers go down and the screen goes black, these are the people sitting in the room with you.</p>
+        <p>there's a specific thing talya does where she just gets it. not everything needs to be explained. not everything needs context. you can walk in with something half-formed and she'll meet you where you are. that's rare. that's worth a spotify cover and more.</p>
+        <p>you have to celebrate them while they're here. you have to make the effort, design the covers, write the pieces, and show up for the dinners. because at the end of the day, the work matters but the people matter more.</p>
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+    </article>
+    <footer><p>© 2025 <em>Wali Medugu</em> — Made with care</p></footer>
+    <script>
+        (function(){const h=document.getElementById('hamburger-toggle'),n=document.getElementById('nav-links'),o=document.getElementById('nav-overlay');function t(){const i=h.classList.toggle('active');n.classList.toggle('active');o.classList.toggle('active');document.body.classList.toggle('menu-open');h.setAttribute('aria-expanded',i);}function c(){h.classList.remove('active');n.classList.remove('active');o.classList.remove('active');document.body.classList.remove('menu-open');h.setAttribute('aria-expanded','false');}h.addEventListener('click',t);o.addEventListener('click',c);n.querySelectorAll('a').forEach(l=>l.addEventListener('click',c));document.addEventListener('keydown',e=>{if(e.key==='Escape')c();});window.addEventListener('resize',()=>{if(window.innerWidth>768)c();});})();
+    </script>
+</body>
+</html>

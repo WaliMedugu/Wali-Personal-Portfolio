@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>cura | Wali Medugu Blog</title>
+    <meta name="description" content="we're not calling it pinks anymore. the internal reward system for femn is officially called cura now." />
+    <meta name="author" content="Wali Medugu" /><meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/jpeg" href="../assets/me.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/blog-post.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home"><img src="../assets/sign_transparent.png" alt="Wali Medugu Logo" style="height:56px;width:auto;object-fit:contain;"></a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <header>
+        <span class="label">Building / Activism Tech</span>
+        <h1>12. cura</h1>
+        <div class="meta"><span>April 10, 2026</span><span>4 min read</span></div>
+    </header>
+    <article>
+        <p>we're not calling it pinks anymore.</p>
+        <p>the internal reward system for femn is officially called cura now. it just fits the tone better. it feels more grounded, more intentional. femn is primarily an activism app. i've had to clarify this a lot recently, but it does not target a particular gender; it's about providing a safe, functional platform for marginalized communities to organize, share resources, and speak up without fear.</p>
+        <p>i also made a massive structural call recently regarding the architecture. no shadow ledger. we are completely dropping the direct financial features. i am not implementing it anymore. the operational risks were just too high, the regulatory landscape is a mess, and honestly, it was pulling focus away from the core mission of activism.</p>
+        <div class="collage-container">
+            <div class="collage-item item-1"><img src="../assets/blogs/cura/img1.jpg" alt="Activism community gathering" loading="lazy"></div>
+            <div class="collage-item item-2"><img src="../assets/blogs/cura/img2.jpg" alt="App design wireframe" loading="lazy"></div>
+            <div class="collage-item item-3"><img src="../assets/blogs/cura/img3.jpg" alt="Community organization aesthetic" loading="lazy"></div>
+            <div class="collage-item item-4"><img src="../assets/blogs/cura/img4.jpg" alt="Femn branding warmth" loading="lazy"></div>
+            <div class="collage-item item-5"><img src="../assets/blogs/cura/img5.jpg" alt="Platform building at desk" loading="lazy"></div>
+        </div>
+        <p>sometimes building a good app means knowing what to cut before it ever ships. you get these grand ideas in the initial brainstorming sessions, but when you look at the reality of deployment and security, you have to be ruthless. cura remains, the activism remains, but the unnecessary weight has been stripped out. it's leaner now. better.</p>
+        <p>the name change matters more than it might seem. names do something to a product's identity. pinks felt temporary, like a placeholder that had overstayed its welcome. cura feels like what it actually is. a care system. a way to recognize people who are doing real work in hard spaces and make sure that work is seen and rewarded in a meaningful way.</p>
+        <p>we ship what we ship. the rest gets cut. that's the job.</p>
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+    </article>
+    <footer><p>© 2025 <em>Wali Medugu</em> — Made with care</p></footer>
+    <script>
+        (function(){const h=document.getElementById('hamburger-toggle'),n=document.getElementById('nav-links'),o=document.getElementById('nav-overlay');function t(){const i=h.classList.toggle('active');n.classList.toggle('active');o.classList.toggle('active');document.body.classList.toggle('menu-open');h.setAttribute('aria-expanded',i);}function c(){h.classList.remove('active');n.classList.remove('active');o.classList.remove('active');document.body.classList.remove('menu-open');h.setAttribute('aria-expanded','false');}h.addEventListener('click',t);o.addEventListener('click',c);n.querySelectorAll('a').forEach(l=>l.addEventListener('click',c));document.addEventListener('keydown',e=>{if(e.key==='Escape')c();});window.addEventListener('resize',()=>{if(window.innerWidth>768)c();});})();
+    </script>
+</body>
+</html>

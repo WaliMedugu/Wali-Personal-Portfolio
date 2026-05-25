@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>where are they | Wali Medugu Blog</title>
+    <meta name="description" content="some projects exist just to prove you can code. others exist because they have to." />
+    <meta name="author" content="Wali Medugu" /><meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/jpeg" href="../assets/me.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/blog-post.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home"><img src="../assets/sign_transparent.png" alt="Wali Medugu Logo" style="height:56px;width:auto;object-fit:contain;"></a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <header>
+        <span class="label">Building / Civic Tech</span>
+        <h1>09. where are they</h1>
+        <div class="meta"><span>March 15, 2026</span><span>5 min read</span></div>
+    </header>
+    <article>
+        <p>some projects exist just to prove you can code. others exist because they have to.</p>
+        <p>WhereAreThey is the second kind. it's a crowdsourced missing persons platform built specifically for nigeria, using flutter and supabase. it's heavy work. not technically — technically it's just database management, geolocation, and clean UI reporting — but mentally, it takes a toll.</p>
+        <p>you're building a database for absence. you're designing a user interface for empty spaces, for families who are waiting for news that might never come. when you're testing the image upload features or setting up the push notifications for local radius alerts, you aren't just thinking about bytes and bandwidth. you're thinking about real people who are lost in real time. the platform relies on the crowd, on the idea that someone, somewhere, saw something and can drop a pin or update a status.</p>
+        <div class="collage-container">
+            <div class="collage-item item-1"><img src="../assets/blogs/where-are-they/img1.jpg" alt="Nigeria community map" loading="lazy"></div>
+            <div class="collage-item item-2"><img src="../assets/blogs/where-are-they/img2.jpg" alt="Missing person poster aesthetic" loading="lazy"></div>
+            <div class="collage-item item-3"><img src="../assets/blogs/where-are-they/img3.jpg" alt="Mobile app location tracking UI" loading="lazy"></div>
+            <div class="collage-item item-4"><img src="../assets/blogs/where-are-they/img4.jpg" alt="Empty chair in soft light" loading="lazy"></div>
+            <div class="collage-item item-5"><img src="../assets/blogs/where-are-they/img5.jpg" alt="Community gathering at golden hour" loading="lazy"></div>
+        </div>
+        <p>but if it works, if it helps even one person find their way back or gives a family some semblance of closure, it justifies every single late night i've spent staring at the console. technology is just a tool at the end of the day. it doesn't have a soul. what matters is where you point it, and right now, i want to point it at the things that actually hurt.</p>
+        <p>the hardest design decision was the sighting verification system. how do you confirm that someone's tip is genuine without adding friction that discourages people from reporting at all. you want high volume. you also want signal over noise. those two things pull against each other and the balance point is somewhere in the UI that i've been iterating on for weeks.</p>
+        <p>there's also a dignity consideration baked into every screen. the families using this platform are not just users in a product funnel. they're people in crisis. every notification copy, every error message, every empty state has to be written with that specific reality in mind. that's a different kind of product thinking than i'm used to.</p>
+        <p>we'll get there. and when we do, it'll have been worth every second of the heaviness.</p>
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+    </article>
+    <footer><p>© 2025 <em>Wali Medugu</em> — Made with care</p></footer>
+    <script>
+        (function(){const h=document.getElementById('hamburger-toggle'),n=document.getElementById('nav-links'),o=document.getElementById('nav-overlay');function t(){const i=h.classList.toggle('active');n.classList.toggle('active');o.classList.toggle('active');document.body.classList.toggle('menu-open');h.setAttribute('aria-expanded',i);}function c(){h.classList.remove('active');n.classList.remove('active');o.classList.remove('active');document.body.classList.remove('menu-open');h.setAttribute('aria-expanded','false');}h.addEventListener('click',t);o.addEventListener('click',c);n.querySelectorAll('a').forEach(l=>l.addEventListener('click',c));document.addEventListener('keydown',e=>{if(e.key==='Escape')c();});window.addEventListener('resize',()=>{if(window.innerWidth>768)c();});})();
+    </script>
+</body>
+</html>

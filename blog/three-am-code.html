@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>3am code | Wali Medugu Blog</title>
+    <meta name="description" content="there's a specific kind of problem-solving that only happens when you've been coding for so long the line between awake and dreaming gets questionable." />
+    <meta name="author" content="Wali Medugu" /><meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/jpeg" href="../assets/me.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/blog-post.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home"><img src="../assets/sign_transparent.png" alt="Wali Medugu Logo" style="height:56px;width:auto;object-fit:contain;"></a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <header>
+        <span class="label">Building / Late Night Thoughts</span>
+        <h1>22. 3am code and the things you only understand when you're delirious</h1>
+        <div class="meta"><span>March 25, 2026</span><span>5 min read</span></div>
+    </header>
+    <article>
+        <p>there's a specific kind of problem-solving that only happens when you've been coding for so long that the line between awake and dreaming gets questionable.</p>
+        <p>i don't recommend it. on a health level, it's a terrible idea. on a productivity level, it sometimes yields something that feels close to genius.</p>
+        <p>i was working on arguuu. specifically, on the ai judge system. the part of the app that's supposed to listen to two people argue and actually understand who won and why. which is harder than it sounds because winning an argument isn't objective. it's not points. it's rhetorical structure and emotional intelligence and the ability to adapt to what your opponent is actually saying. i'd been thinking about it for weeks. the prompt was close but not quite right. there was something missing. some layer of understanding that would make the bot feel like it actually gets what's happening instead of just pattern-matching to keywords.</p>
+        <div class="collage-container">
+            <div class="collage-item item-1"><img src="../assets/blogs/3am-code/img1.jpg" alt="Dark terminal screen late night" loading="lazy"></div>
+            <div class="collage-item item-2"><img src="../assets/blogs/3am-code/img2.jpg" alt="Cold coffee next to keyboard" loading="lazy"></div>
+            <div class="collage-item item-3"><img src="../assets/blogs/3am-code/img3.jpg" alt="Monitor glow in dark room" loading="lazy"></div>
+            <div class="collage-item item-4"><img src="../assets/blogs/3am-code/img4.jpg" alt="Notebook with late night notes" loading="lazy"></div>
+            <div class="collage-item item-5"><img src="../assets/blogs/3am-code/img5.jpg" alt="Programmer focus deep work" loading="lazy"></div>
+        </div>
+        <p>and then at 3am on a sunday — or monday, time stops meaning anything at that point — it clicked. not metaphorically. literally. i was staring at the code and the coffee was cold and my eyes had that specific kind of dry that makes the screen look like it's swimming. and then the structure rearranged itself in my head and suddenly i could see what was missing.</p>
+        <p>it wasn't about building a better rubric. it was about the order. about asking the questions in a sequence that would naturally lead the model to deeper understanding. about using earlier judgments to inform later ones. about building understanding the way an actual judge would, rather than trying to render a verdict based on a snapshot.</p>
+        <p>i coded for another three hours after that. not because i was still delirious — though i was — but because the solution was there and if i didn't get it out of my head and into the system, it would evaporate by morning the way 3am clarity usually does. when someone tested it the next day, the results were objectively better. the bot felt more thoughtful. more fair. more like it had actually listened. i'm not saying it's sustainable. i'm saying it works.</p>
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+    </article>
+    <footer><p>© 2025 <em>Wali Medugu</em> — Made with care</p></footer>
+    <script>
+        (function(){const h=document.getElementById('hamburger-toggle'),n=document.getElementById('nav-links'),o=document.getElementById('nav-overlay');function t(){const i=h.classList.toggle('active');n.classList.toggle('active');o.classList.toggle('active');document.body.classList.toggle('menu-open');h.setAttribute('aria-expanded',i);}function c(){h.classList.remove('active');n.classList.remove('active');o.classList.remove('active');document.body.classList.remove('menu-open');h.setAttribute('aria-expanded','false');}h.addEventListener('click',t);o.addEventListener('click',c);n.querySelectorAll('a').forEach(l=>l.addEventListener('click',c));document.addEventListener('keydown',e=>{if(e.key==='Escape')c();});window.addEventListener('resize',()=>{if(window.innerWidth>768)c();});})();
+    </script>
+</body>
+</html>

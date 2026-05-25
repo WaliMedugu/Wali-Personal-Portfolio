@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>gurenge | Wali Medugu Blog</title>
+    <meta name="description" content="being a beginner at something is humbling. i picked up the violin." />
+    <meta name="author" content="Wali Medugu" /><meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/jpeg" href="../assets/me.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/blog-post.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home"><img src="../assets/sign_transparent.png" alt="Wali Medugu Logo" style="height:56px;width:auto;object-fit:contain;"></a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <header>
+        <span class="label">Music / Personal Reflections</span>
+        <h1>13. gurenge</h1>
+        <div class="meta"><span>April 18, 2026</span><span>4 min read</span></div>
+    </header>
+    <article>
+        <p>being a beginner at something is humbling.</p>
+        <p>i picked up the violin because i wanted to play the anime themes that keep running through my head. specifically gurenge from demon slayer. my brain understands the mechanics of it. i can read the scale breakdowns, i can memorize the finger charts, i know exactly where my posture should be in theory.</p>
+        <p>but my hands completely refuse to cooperate. the bow moves too fast, the strings screech, and the transition between notes feels less like music and more like a tactical error. it sounds like a dying cat in my room right now, but every once in a while, i can hear the actual melody hiding underneath the noise. just a split second of clarity before it falls apart again.</p>
+        <div class="collage-container">
+            <div class="collage-item item-1"><img src="../assets/blogs/gurenge/img1.jpg" alt="Violin close-up on wood surface" loading="lazy"></div>
+            <div class="collage-item item-2"><img src="../assets/blogs/gurenge/img2.jpg" alt="Demon slayer anime aesthetic" loading="lazy"></div>
+            <div class="collage-item item-3"><img src="../assets/blogs/gurenge/img3.jpg" alt="Violin bow and strings detail" loading="lazy"></div>
+            <div class="collage-item item-4"><img src="../assets/blogs/gurenge/img4.jpg" alt="Sheet music and finger charts" loading="lazy"></div>
+            <div class="collage-item item-5"><img src="../assets/blogs/gurenge/img5.jpg" alt="Late night music practice aesthetic" loading="lazy"></div>
+        </div>
+        <p>i will get this, though. it might take an unreasonable amount of hours, but i will get it. there is something incredibly healthy about being bad at something and knowing that the only way out is through repetition. in coding, you can look up documentation. with the violin, you just have to sit there and face the sound until your fingers remember the shape of the music.</p>
+        <p>the howl's moving castle theme was actually the gateway. that movie does something to me. and the music — that specific piano-to-orchestral swell — made me want to understand how to make something feel like that. the violin felt like the right instrument for it. something warm. something that carries emotion in its texture rather than just its notes.</p>
+        <p>demon slayer was a detour into the dramatically harder version of the same goal. but the goal is the same: i want to be able to hold an instrument and make something that sounds like what i feel. i'm not there yet. but i am further than i was last week, and that's the only metric that matters.</p>
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+    </article>
+    <footer><p>© 2025 <em>Wali Medugu</em> — Made with care</p></footer>
+    <script>
+        (function(){const h=document.getElementById('hamburger-toggle'),n=document.getElementById('nav-links'),o=document.getElementById('nav-overlay');function t(){const i=h.classList.toggle('active');n.classList.toggle('active');o.classList.toggle('active');document.body.classList.toggle('menu-open');h.setAttribute('aria-expanded',i);}function c(){h.classList.remove('active');n.classList.remove('active');o.classList.remove('active');document.body.classList.remove('menu-open');h.setAttribute('aria-expanded','false');}h.addEventListener('click',t);o.addEventListener('click',c);n.querySelectorAll('a').forEach(l=>l.addEventListener('click',c));document.addEventListener('keydown',e=>{if(e.key==='Escape')c();});window.addEventListener('resize',()=>{if(window.innerWidth>768)c();});})();
+    </script>
+</body>
+</html>

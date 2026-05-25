@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>why i'm afraid of launching | Wali Medugu Blog</title>
+    <meta name="description" content="the closer i get to actually releasing these products the more real the fear becomes." />
+    <meta name="author" content="Wali Medugu" /><meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/jpeg" href="../assets/me.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/blog-post.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home"><img src="../assets/sign_transparent.png" alt="Wali Medugu Logo" style="height:56px;width:auto;object-fit:contain;"></a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <header>
+        <span class="label">Building / Personal Reflections</span>
+        <h1>34. why i'm afraid of launching</h1>
+        <div class="meta"><span>February 20, 2026</span><span>5 min read</span></div>
+    </header>
+    <article>
+        <p>the closer i get to actually releasing these products the more real the fear becomes.</p>
+        <p>there's a theoretical version of blue particle that exists in my head and on my laptop. it's perfect in the way only theoretical things can be. it's not constrained by user feedback or market reality or the actual limitations of time and resources. once i launch it has to exist in the real world. which means it gets to be judged. gets to be compared to other things. gets to fail visibly. the theoretical version can't fail.</p>
+        <p>arguuu is almost ready. the code is solid. the ai integration is working. the interface is intuitive. we have our first cohort of beta testers lined up. everything is in place. except my brain keeps finding new things that could be better. new edge cases that need handling. new potential failure points. i could be ready in two weeks. i could also iterate for six months and still not feel completely ready.</p>
+        <div class="collage-container">
+            <div class="collage-item item-1"><img src="../assets/blogs/launch/img1.jpg" alt="Product launch anticipation" loading="lazy"></div>
+            <div class="collage-item item-2"><img src="../assets/blogs/launch/img2.jpg" alt="App ready to ship" loading="lazy"></div>
+            <div class="collage-item item-3"><img src="../assets/blogs/launch/img3.jpg" alt="Fear and courage balance" loading="lazy"></div>
+            <div class="collage-item item-4"><img src="../assets/blogs/launch/img4.jpg" alt="Building and shipping aesthetic" loading="lazy"></div>
+            <div class="collage-item item-5"><img src="../assets/blogs/launch/img5.jpg" alt="Startup launch moment" loading="lazy"></div>
+        </div>
+        <p>there's a specific anxiety in that gap. because at some point you have to accept that ready is not a destination you arrive at. it's a decision you make. you decide that good enough is good enough and you release. i'm not great at that decision.</p>
+        <p>what if people don't want what i'm building. what if the market is smaller than i think. what if there's a better solution and i've just wasted months on something that doesn't matter. what if i'm not actually good at this and i've just been lucky so far. the arguments against launching are infinite. the argument for launching is simple: i'll never know until i try.</p>
+        <p>that's the terrifying part. not the failure. the not knowing. so i'm going to launch. probably sometime this quarter. definitely before my own fear convinces me it's a bad idea. wish me luck.</p>
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+    </article>
+    <footer><p>© 2025 <em>Wali Medugu</em> — Made with care</p></footer>
+    <script>
+        (function(){const h=document.getElementById('hamburger-toggle'),n=document.getElementById('nav-links'),o=document.getElementById('nav-overlay');function t(){const i=h.classList.toggle('active');n.classList.toggle('active');o.classList.toggle('active');document.body.classList.toggle('menu-open');h.setAttribute('aria-expanded',i);}function c(){h.classList.remove('active');n.classList.remove('active');o.classList.remove('active');document.body.classList.remove('menu-open');h.setAttribute('aria-expanded','false');}h.addEventListener('click',t);o.addEventListener('click',c);n.querySelectorAll('a').forEach(l=>l.addEventListener('click',c));document.addEventListener('keydown',e=>{if(e.key==='Escape')c();});window.addEventListener('resize',()=>{if(window.innerWidth>768)c();});})();
+    </script>
+</body>
+</html>

@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>the schedule | Wali Medugu Blog</title>
+    <meta name="description" content="optimizing a timetable is an art form." />
+    <meta name="author" content="Wali Medugu" /><meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/jpeg" href="../assets/me.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/blog-post.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home"><img src="../assets/sign_transparent.png" alt="Wali Medugu Logo" style="height:56px;width:auto;object-fit:contain;"></a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <header>
+        <span class="label">Campus Life / Student Tactics</span>
+        <h1>17. the schedule</h1>
+        <div class="meta"><span>May 15, 2026</span><span>4 min read</span></div>
+    </header>
+    <article>
+        <p>optimizing a timetable is an art form.</p>
+        <p>mutma and i spent way too long during registration trying to figure out how to minimize our physical presence on campus this semester. if there is a way to compress four days of classes into two tightly packed blocks and completely avoid an 8am lecture, i will find it. Nile University is great, but the gate situation and the commute will drain your battery before you even sit down in a lecture hall.</p>
+        <p>shoutout to mrs. hauwa ibrahim (that's H-A-U-W-A, for the record, because i will not have her name misspelled on my watch) and mr. ogar olom austin for being the bright spots in the general academic chaos. when you find the lecturers who actually get it, who make your brain move faster when you leave the room, you protect those slots on your schedule.</p>
+        <div class="collage-container">
+            <div class="collage-item item-1"><img src="../assets/blogs/timetable/img1.jpg" alt="University campus green grounds" loading="lazy"></div>
+            <div class="collage-item item-2"><img src="../assets/blogs/timetable/img2.jpg" alt="Timetable planning notebook" loading="lazy"></div>
+            <div class="collage-item item-3"><img src="../assets/blogs/timetable/img3.jpg" alt="Student lecture hall" loading="lazy"></div>
+            <div class="collage-item item-4"><img src="../assets/blogs/timetable/img4.jpg" alt="Campus walkway golden hour" loading="lazy"></div>
+            <div class="collage-item item-5"><img src="../assets/blogs/timetable/img5.jpg" alt="Study session aesthetic" loading="lazy"></div>
+        </div>
+        <p>you group your classes, you optimize the breaks, and you reclaim your free days so you can actually sit at your desk and build things. it's survival tactics for a 200-level software engineering student. the goal is maximum efficiency, minimum presence.</p>
+        <p>this sounds cynical. it's not. i actually like the campus. there are corners of nile that i genuinely enjoy being in. the greenery, the occasional silence, the people you end up in conversation with in random places. but being strategic about when you're there means you can be fully present when you are there, instead of just exhausted and counting down the hours.</p>
+        <p>the schedule is a resource management problem. you have limited energy. the question is how you allocate it.</p>
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+    </article>
+    <footer><p>© 2025 <em>Wali Medugu</em> — Made with care</p></footer>
+    <script>
+        (function(){const h=document.getElementById('hamburger-toggle'),n=document.getElementById('nav-links'),o=document.getElementById('nav-overlay');function t(){const i=h.classList.toggle('active');n.classList.toggle('active');o.classList.toggle('active');document.body.classList.toggle('menu-open');h.setAttribute('aria-expanded',i);}function c(){h.classList.remove('active');n.classList.remove('active');o.classList.remove('active');document.body.classList.remove('menu-open');h.setAttribute('aria-expanded','false');}h.addEventListener('click',t);o.addEventListener('click',c);n.querySelectorAll('a').forEach(l=>l.addEventListener('click',c));document.addEventListener('keydown',e=>{if(e.key==='Escape')c();});window.addEventListener('resize',()=>{if(window.innerWidth>768)c();});})();
+    </script>
+</body>
+</html>

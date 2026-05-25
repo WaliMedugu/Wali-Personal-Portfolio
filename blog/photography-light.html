@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>photography and the way color lies | Wali Medugu Blog</title>
+    <meta name="description" content="i've been taking more photos lately and the thing nobody tells you about photography is that it's really about paying attention to light." />
+    <meta name="author" content="Wali Medugu" /><meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/jpeg" href="../assets/me.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/blog-post.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home"><img src="../assets/sign_transparent.png" alt="Wali Medugu Logo" style="height:56px;width:auto;object-fit:contain;"></a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <header>
+        <span class="label">Photography / Art</span>
+        <h1>27. photography and the way color lies</h1>
+        <div class="meta"><span>March 12, 2026</span><span>5 min read</span></div>
+    </header>
+    <article>
+        <p>i've been taking more photos lately and the thing nobody tells you about photography is that it's really about paying attention to light.</p>
+        <p>people think it's about the subject. about finding beautiful things to point your camera at. they're wrong. or not wrong exactly but wrong about what the work actually is. the work is light. understanding how it moves. how it changes. how the exact same scene looks completely different if you wait three hours for the sun to move or move yourself ten degrees to the left.</p>
+        <p>i noticed this in abuja specifically because the light here is intense. it's not subtle. it doesn't ask permission. it just hits you directly and changes the entire feeling of a space. i've been in a perfectly ordinary room at 2pm where the light coming through the window made everything feel tinged with something. melancholy maybe. or urgency. the light makes a choice about how you're supposed to feel.</p>
+        <div class="collage-container">
+            <div class="collage-item item-1"><img src="../assets/blogs/photography/img1.jpg" alt="Golden hour light through window" loading="lazy"></div>
+            <div class="collage-item item-2"><img src="../assets/blogs/photography/img2.jpg" alt="Abuja city light study" loading="lazy"></div>
+            <div class="collage-item item-3"><img src="../assets/blogs/photography/img3.jpg" alt="Camera and lens on surface" loading="lazy"></div>
+            <div class="collage-item item-4"><img src="../assets/blogs/photography/img4.jpg" alt="Light and shadow composition" loading="lazy"></div>
+            <div class="collage-item item-5"><img src="../assets/blogs/photography/img5.jpg" alt="Portrait in natural light" loading="lazy"></div>
+        </div>
+        <p>and then at 6pm the same room with the same objects looks gentle. almost peaceful. like it's giving you permission to slow down. that's the actual work. learning to see what the light is doing and finding the moment where what you want to say matches what the light is already saying.</p>
+        <p>i've been doing acrylic painting too and it's the same thing. you can have perfect technique and perfect color selection but if you don't understand light — how it sits on surfaces, how it reveals things, how it creates shadow and depth — the painting will always feel flat. most of the paintings i do fail because i'm thinking too much about the object i'm trying to represent instead of thinking about how light is moving across that object.</p>
+        <p>once you start seeing that way you can't turn it off. i was somewhere recently and the light hit someone's face in a specific way and i had this moment where i wanted to photograph it but also wanted to just sit with it. ended up doing neither. sometimes the moment is too good to interrupt with the machinery of trying to capture it. but i saw it. that's the work. that's always the work.</p>
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+    </article>
+    <footer><p>© 2025 <em>Wali Medugu</em> — Made with care</p></footer>
+    <script>
+        (function(){const h=document.getElementById('hamburger-toggle'),n=document.getElementById('nav-links'),o=document.getElementById('nav-overlay');function t(){const i=h.classList.toggle('active');n.classList.toggle('active');o.classList.toggle('active');document.body.classList.toggle('menu-open');h.setAttribute('aria-expanded',i);}function c(){h.classList.remove('active');n.classList.remove('active');o.classList.remove('active');document.body.classList.remove('menu-open');h.setAttribute('aria-expanded','false');}h.addEventListener('click',t);o.addEventListener('click',c);n.querySelectorAll('a').forEach(l=>l.addEventListener('click',c));document.addEventListener('keydown',e=>{if(e.key==='Escape')c();});window.addEventListener('resize',()=>{if(window.innerWidth>768)c();});})();
+    </script>
+</body>
+</html>

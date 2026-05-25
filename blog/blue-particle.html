@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>the blue particle team | Wali Medugu Blog</title>
+    <meta name="description" content="you can't build everything alone. i founded blue particle, but the team is what actually keeps it moving." />
+    <meta name="author" content="Wali Medugu" /><meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/jpeg" href="../assets/me.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/blog-post.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home"><img src="../assets/sign_transparent.png" alt="Wali Medugu Logo" style="height:56px;width:auto;object-fit:contain;"></a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <header>
+        <span class="label">Building / Leadership</span>
+        <h1>16. the blue particle team</h1>
+        <div class="meta"><span>May 8, 2026</span><span>4 min read</span></div>
+    </header>
+    <article>
+        <p>you can't build everything alone.</p>
+        <p>i might have founded blue particle, but the team is what actually keeps the engine running. adekola, albert, joan, chris, jituboh. managing workflows, compiling technical reports, and aligning timelines with them has taught me more about leadership than any ENT 212 entrepreneurship class ever could.</p>
+        <p>we argue about implementation details, we spend hours debugging each other's pull requests, and we collectively complain about deadlines that seemed reasonable two weeks ago but now feel like a personal threat. it's a good crew. finding developers who actually care about the final product — who care about the micro-interactions and the data integrity instead of just trying to close the ticket and go to sleep — is incredibly rare.</p>
+        <div class="collage-container">
+            <div class="collage-item item-1"><img src="../assets/blogs/blue-particle/img1.jpg" alt="Team collaboration at desks" loading="lazy"></div>
+            <div class="collage-item item-2"><img src="../assets/blogs/blue-particle/img2.jpg" alt="Startup workspace aesthetic" loading="lazy"></div>
+            <div class="collage-item item-3"><img src="../assets/blogs/blue-particle/img3.jpg" alt="Code review session" loading="lazy"></div>
+            <div class="collage-item item-4"><img src="../assets/blogs/blue-particle/img4.jpg" alt="Team planning and whiteboard" loading="lazy"></div>
+            <div class="collage-item item-5"><img src="../assets/blogs/blue-particle/img5.jpg" alt="Developer focus deep work" loading="lazy"></div>
+        </div>
+        <p>i'm grateful for them. genuinely. when you're running an organization, you quickly realize that your ideas are only as good as the people who help you execute them. they keep me honest, they keep the code clean, and they make the long sprints feel like a shared adventure instead of a solo sentence.</p>
+        <p>leadership is something i'm still actively learning. there are days when i get it right — when the communication is clear and everyone knows what they're building and why — and there are days when i realize i've been assuming context that i hadn't actually communicated. the gap between the version of the project in my head and the version in my team's heads is something i have to actively work to close.</p>
+        <p>that's the actual work of leading. not the vision. not the architecture. the translation.</p>
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+    </article>
+    <footer><p>© 2025 <em>Wali Medugu</em> — Made with care</p></footer>
+    <script>
+        (function(){const h=document.getElementById('hamburger-toggle'),n=document.getElementById('nav-links'),o=document.getElementById('nav-overlay');function t(){const i=h.classList.toggle('active');n.classList.toggle('active');o.classList.toggle('active');document.body.classList.toggle('menu-open');h.setAttribute('aria-expanded',i);}function c(){h.classList.remove('active');n.classList.remove('active');o.classList.remove('active');document.body.classList.remove('menu-open');h.setAttribute('aria-expanded','false');}h.addEventListener('click',t);o.addEventListener('click',c);n.querySelectorAll('a').forEach(l=>l.addEventListener('click',c));document.addEventListener('keydown',e=>{if(e.key==='Escape')c();});window.addEventListener('resize',()=>{if(window.innerWidth>768)c();});})();
+    </script>
+</body>
+</html>

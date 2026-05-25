@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>moon | Wali Medugu Blog</title>
+    <meta name="description" content="she goes by a few names. umeeh. ummi. moon." />
+    <meta name="author" content="Wali Medugu" /><meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/jpeg" href="../assets/me.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/blog-post.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home"><img src="../assets/sign_transparent.png" alt="Wali Medugu Logo" style="height:56px;width:auto;object-fit:contain;"></a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <header>
+        <span class="label">Personal Reflections</span>
+        <h1>10. moon</h1>
+        <div class="meta"><span>March 25, 2026</span><span>4 min read</span></div>
+    </header>
+    <article>
+        <p>she goes by a few names.</p>
+        <p>umeeh. ummi. moon.</p>
+        <p>there is a specific kind of quiet that settles over me when we talk, the kind that i don't really get anywhere else. when everything else is loud — when blue particle studios is hectic, when code campus is demanding, when hackathons are burning through my brain cells — she is just steady.</p>
+        <div class="collage-container">
+            <div class="collage-item item-1"><img src="../assets/blogs/moon/img1.jpg" alt="Night sky with full moon" loading="lazy"></div>
+            <div class="collage-item item-2"><img src="../assets/blogs/moon/img2.jpg" alt="Soft warm ambient light" loading="lazy"></div>
+            <div class="collage-item item-3"><img src="../assets/blogs/moon/img3.jpg" alt="Quiet evening aesthetic" loading="lazy"></div>
+            <div class="collage-item item-4"><img src="../assets/blogs/moon/img4.jpg" alt="Cozy indoor warm light" loading="lazy"></div>
+            <div class="collage-item item-5"><img src="../assets/blogs/moon/img5.jpg" alt="Moon reflected on water" loading="lazy"></div>
+        </div>
+        <p>it's rare to find someone who doesn't demand a performance from you. someone who is perfectly fine with the silent, completely exhausted version of you that shows up at the end of a fourteen-hour day of building things. she doesn't need me to be the team lead or the founder or the guy who has everything figured out. she just lets me exist in the space next to her.</p>
+        <p>i don't talk about it much on here because some things are better kept away from the screen. some things lose their texture when you try to turn them into paragraphs for public consumption. but i just wanted to write it down so it exists somewhere permanent. a small note in the ledger.</p>
+        <p>she's my moon, and the sky is a lot less empty when she's around.</p>
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+    </article>
+    <footer><p>© 2025 <em>Wali Medugu</em> — Made with care</p></footer>
+    <script>
+        (function(){const h=document.getElementById('hamburger-toggle'),n=document.getElementById('nav-links'),o=document.getElementById('nav-overlay');function t(){const i=h.classList.toggle('active');n.classList.toggle('active');o.classList.toggle('active');document.body.classList.toggle('menu-open');h.setAttribute('aria-expanded',i);}function c(){h.classList.remove('active');n.classList.remove('active');o.classList.remove('active');document.body.classList.remove('menu-open');h.setAttribute('aria-expanded','false');}h.addEventListener('click',t);o.addEventListener('click',c);n.querySelectorAll('a').forEach(l=>l.addEventListener('click',c));document.addEventListener('keydown',e=>{if(e.key==='Escape')c();});window.addEventListener('resize',()=>{if(window.innerWidth>768)c();});})();
+    </script>
+</body>
+</html>

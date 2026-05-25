@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>styclick and the fashion startup nobody asked for | Wali Medugu Blog</title>
+    <meta name="description" content="building a fashion marketplace when you're a software engineer with no fashion background is a specific kind of delusion." />
+    <meta name="author" content="Wali Medugu" /><meta name="robots" content="index, follow" />
+    <link rel="icon" type="image/jpeg" href="../assets/me.jpg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Lora:ital,wght@0,400;0,500;1,400&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../assets/blog-post.css">
+</head>
+<body>
+    <nav>
+        <a href="../index.html" class="nav-logo" aria-label="Wali Medugu Home"><img src="../assets/sign_transparent.png" alt="Wali Medugu Logo" style="height:56px;width:auto;object-fit:contain;"></a>
+        <button class="hamburger" id="hamburger-toggle" aria-label="Toggle navigation menu" aria-expanded="false"><span></span><span></span><span></span></button>
+    </nav>
+    <div class="nav-overlay" id="nav-overlay"></div>
+    <ul class="nav-links" id="nav-links">
+        <li><a href="../index.html">Home</a></li><li><a href="../projects.html">Projects</a></li><li><a href="../blog.html">Blog</a></li>
+    </ul>
+    <header>
+        <span class="label">Building / Fashion Tech</span>
+        <h1>28. styclick and the fashion startup nobody asked for</h1>
+        <div class="meta"><span>March 10, 2026</span><span>5 min read</span></div>
+    </header>
+    <article>
+        <p>building a fashion marketplace when you're a software engineer with no fashion background is a specific kind of delusion.</p>
+        <p>but here we are. styclick exists because i saw a problem. not because i have fashion expertise. because i saw the way people — especially nigerians — relate to clothing and tailoring and realized the current infrastructure is basically non-existent. you have tailors who are brilliant but have no way to reach customers beyond word of mouth. you have people who want specific things made but no way to find the right craftsperson. the whole thing is inefficient in a way that a market could absolutely fix.</p>
+        <p>the recent work has been heavy on the design side. the warm editorial system is finally feeling right. the aesthetic is coming together. it feels like something people would actually want to spend time in, not just a transactional app where you're getting in and getting out. but building this while running blue particle and doing the arguuu work and being a student is genuinely the most stretched i've ever been.</p>
+        <div class="collage-container">
+            <div class="collage-item item-1"><img src="../assets/blogs/styclick-vision/img1.jpg" alt="Nigerian fashion and tailoring" loading="lazy"></div>
+            <div class="collage-item item-2"><img src="../assets/blogs/styclick-vision/img2.jpg" alt="Fabric and textile market" loading="lazy"></div>
+            <div class="collage-item item-3"><img src="../assets/blogs/styclick-vision/img3.jpg" alt="Fashion app UI design" loading="lazy"></div>
+            <div class="collage-item item-4"><img src="../assets/blogs/styclick-vision/img4.jpg" alt="Tailor at work close-up" loading="lazy"></div>
+            <div class="collage-item item-5"><img src="../assets/blogs/styclick-vision/img5.jpg" alt="Nigerian style aesthetic" loading="lazy"></div>
+        </div>
+        <p>some days i love styclick. i get into the detail work and it feels right. the color palettes. the typography. the way the ui flows. there's something about fashion and design that makes sense to my brain in a way that's distinct from the activation required for arguuu.</p>
+        <p>other days i resent it because it's the thing i'm not working on when i should be. it's the resource black hole that keeps me from having a regular sleep schedule. but the market is real. the need is real. and i'm the only person i know who is going to build it. so i keep showing up to styclick even when arguuu is screaming for attention.</p>
+        <p>either way styclick is becoming real. one sprint at a time.</p>
+        <a href="../blog.html" class="back-link">← Back to Blog</a>
+    </article>
+    <footer><p>© 2025 <em>Wali Medugu</em> — Made with care</p></footer>
+    <script>
+        (function(){const h=document.getElementById('hamburger-toggle'),n=document.getElementById('nav-links'),o=document.getElementById('nav-overlay');function t(){const i=h.classList.toggle('active');n.classList.toggle('active');o.classList.toggle('active');document.body.classList.toggle('menu-open');h.setAttribute('aria-expanded',i);}function c(){h.classList.remove('active');n.classList.remove('active');o.classList.remove('active');document.body.classList.remove('menu-open');h.setAttribute('aria-expanded','false');}h.addEventListener('click',t);o.addEventListener('click',c);n.querySelectorAll('a').forEach(l=>l.addEventListener('click',c));document.addEventListener('keydown',e=>{if(e.key==='Escape')c();});window.addEventListener('resize',()=>{if(window.innerWidth>768)c();});})();
+    </script>
+</body>
+</html>
